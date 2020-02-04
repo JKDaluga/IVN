@@ -1,0 +1,23 @@
+<script src="https://aframe.io/releases/0.9.2/aframe.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.0.1/dist/aframe-extras.min.js"></script>
+
+<body>
+  <a-scene renderer="gammaOutput: true" background="color: lightblue;">
+
+    <!-- CAMERA -->
+    <a-entity id="rig" movement-controls="constrainToNavMesh: true;">
+      <a-entity camera look-controls="pointerLockEnabled: true;" position="0 1.6 0"></a-entity>
+    </a-entity>
+
+    <!-- STAGE -->
+    <a-entity scale="0.5 1 1">
+      <a-entity geometry="primitive: plane; height: 10; width: 10;" material="color: indigo; side: double;"
+        rotation="-90 0 0" nav-mesh></a-entity>
+        <a-entity position="10 0 0" geometry="primitive: plane; height: 4; width: 10;" material="color: yellow; side: double;"
+        rotation="-90 0 0" nav-mesh></a-entity>
+    </a-entity>
+
+  </a-scene>
+
+
+</body>
