@@ -55,8 +55,16 @@
 				<a-asset-item id="WestlakeExt" src="ASSETS/MODELS/WestlakeHallExt.gltf"></a-asset-item>
 				<a-asset-item id="OlinExt" src="ASSETS/MODELS/OlinHallExt.gltf"></a-asset-item>
 				<a-asset-item id="BusEngComplex" src="ASSETS/MODELS/BusinessEngineeringComplex.gltf"></a-asset-item>
+				
 				<a-asset-item id="Roads" src="ASSETS/MODELS/CampusRoads.gltf"></a-asset-item>
-				<a-asset-item id="Sidewalks" src="ASSETS/MODELS/Sidewalks_v2.gltf"></a-asset-item>
+				<a-asset-item id="Sidewalks" src="ASSETS/MODELS/Sidewalks_v2.gltf"></a-asset-item>	
+				<a-asset-item id="Lydia" src="ASSETS/MODELS/Lydia.gltf"></a-asset-item>
+				<a-asset-item id="Bench" src="ASSETS/MODELS/Bench/scene.gltf"></a-asset-item>
+				<a-asset-item id="Tree1" src="ASSETS/MODELS/Tree1.gltf"></a-asset-item>
+				<a-asset-item id="Tree2" src="ASSETS/MODELS/Tree2.gltf"></a-asset-item>
+				<a-asset-item id="Tree3" src="ASSETS/MODELS/Tree3.gltf"></a-asset-item>
+				<a-asset-item id="Tree4" src="ASSETS/MODELS/Tree4.gltf"></a-asset-item>
+
 				<img id="Grass" src="ASSETS/TEXTURES/Grass.jpg"></img>
 				<img id="Sidewalks" src="ASSETS/TEXTURES/Sidewalks.tif"></img>
 				<img id="Map" src="ASSETS/CampusMap.png"></img>
@@ -172,6 +180,78 @@
 				repeat="100 100"
 			></a-entity>
 			
+			<!-- Lydia Moss Bradley Statue -->
+			<!	<a-entity			>	
+			<!		gltf-model="#Lydia"	>
+			<!		position="7 10 -24"	>
+			<!		color="#000000"		>	
+			<!	></a-entity>			>
+			
+			<!-- BENCHES -->
+
+			<!-- Founder's circle  -->			
+		
+			<!-- Founder's Circle top right facing Library -->
+			<a-entity
+				gltf-model="#Bench"
+				position="7.000 0.704 -24.152"
+				rotation="0 45 0"
+			></a-entity>		
+
+			<!-- Founder's Circle top left facing BECC -->
+			<a-entity
+				gltf-model="#Bench"
+				position="7.000 0.704 -16.152"
+				rotation="0 135 0"
+			></a-entity>		
+
+			<!-- Founder's Circle bottom left facing BECC -->
+			<a-entity
+				gltf-model="#Bench"
+				position="15.000 0.704 -16.152"
+				rotation="0 -135 0"
+			></a-entity>
+
+			<!-- Founder's Circle bottom right facing Library -->
+			<a-entity
+				gltf-model="#Bench"
+				position="15 0.704 -24.152"
+				rotation="0 -45 0"
+			></a-entity>	
+
+			<!-- TREES -->
+
+			<!-- Bradley Hall Front Right Tree1 -->			
+			<a-entity
+				gltf-model="#Tree1"
+				position="-26.620 -0.351 -58.860"
+				rotation="0 275 0"
+				scale="10 9 10"
+			></a-entity>
+
+			<!-- Long one in front of Olin quad Tree2 -->
+			<a-entity
+				gltf-model="#Tree2"
+				position="9.940 -0.380 11.008"
+				scale="9 9 9"
+			></a-entity>
+
+			<!-- Bradley Hall Front Left Tree3 -->
+			<a-entity
+				gltf-model="#Tree3"
+				position="-14.238 -0.380 17.890"
+				rotation="0 -6.390 0"
+				scale="15 10 15"
+			></a-entity>
+
+			<!-- In front of Westlake Tree4 -->
+			<a-entity
+				gltf-model="#Tree4"
+				position="-1.793 -0.380 73.950"
+				scale="15 15 15"
+			></a-entity>
+
+
 			<!-- Campus Map 
 			<a-plane
 				src="#Map"
