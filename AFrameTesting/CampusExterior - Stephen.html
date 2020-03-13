@@ -1,4 +1,3 @@
-<
 <html>
 	<head>
 		<meta charset="utf-8"/>
@@ -78,8 +77,16 @@
 				<a-asset-item id="WestlakeExt" src="ASSETS/MODELS/WestlakeHallExt.gltf"></a-asset-item>
 				<a-asset-item id="OlinExt" src="ASSETS/MODELS/OlinHallExt.gltf"></a-asset-item>
 				<a-asset-item id="BusEngComplex" src="ASSETS/MODELS/BusinessEngineeringComplex.gltf"></a-asset-item>
+
 				<a-asset-item id="Roads" src="ASSETS/MODELS/CampusRoads_v3.gltf"></a-asset-item>
-				<a-asset-item id="Sidewalks" src="ASSETS/MODELS/Sidewalks_v5.gltf"></a-asset-item>
+				<a-asset-item id="Sidewalks" src="ASSETS/MODELS/Sidewalks_v5.gltf"></a-asset-item>	
+				<a-asset-item id="Lydia" src="ASSETS/MODELS/Lydia.gltf"></a-asset-item>
+				<a-asset-item id="Bench" src="ASSETS/MODELS/Bench/scene.gltf"></a-asset-item>
+				<a-asset-item id="Tree1" src="ASSETS/MODELS/Tree1.gltf"></a-asset-item>
+				<a-asset-item id="Tree2" src="ASSETS/MODELS/Tree2.gltf"></a-asset-item>
+				<a-asset-item id="Tree3" src="ASSETS/MODELS/Tree3.gltf"></a-asset-item>
+				<a-asset-item id="Tree4" src="ASSETS/MODELS/Tree4.gltf"></a-asset-item>
+
 				<img id="Grass" src="ASSETS/TEXTURES/Grass.jpg"></img>
 				<img id="Map" src="ASSETS/CampusMap.png"></img>
 			</a-assets>
@@ -95,7 +102,7 @@
 				position="122.846 166.815 -126.305">
 			</a-entity>
 
-			<!-- Player/User Object-->
+			
 			<a-entity
 				position="0 1.6 2"
 				camera
@@ -109,7 +116,7 @@
 				</a-entity>
 			</a-entity>
 
-			<!-- JS test 
+			<!-- JS test
 			<a-box 
 				color="#EF2D5E" 
 				position="0 1 -4" 
@@ -117,7 +124,7 @@
 			></a-box>
 			-->
 
-			<!-- All Buildings Prototype
+			<!-- All Buildings Prototype 
 			<a-entity
 				gltf-model="#Buildings"
 				rotation="0 2 0"
@@ -130,7 +137,6 @@
 				gltf-model="#BradleyHallExtTextured"
 				position="-81.2 -0.090 -18.631"
 				rotation="0 2 0"
-				shadow
 			></a-entity>
 			
 			<!-- Link to BHall 2F -->
@@ -146,7 +152,6 @@
 				gltf-model="#HartmanCenter"
 				position="72.040 3.8 -44.12"
 				rotation="0 2 0"
-				shadow
 			></a-entity>
 
 			<!-- Swords Hall v1 -->
@@ -154,7 +159,6 @@
 				gltf-model="#SwordsHallExt"
 				position="18.36 0.5 134.7"
 				rotation="0 2 0"
-				shadow
 			></a-entity>
 			
 			<!-- Business Engineering Complex v1 -->
@@ -163,7 +167,6 @@
 				position="1.966 -1.144 -137.391"
 				rotation="0 90.110 0"
 				scale="1.070 1 1"
-				shadow
 			></a-entity>
 			
 			<!-- Westlake Hall v1 -->
@@ -172,16 +175,14 @@
 				position="-68.801 4.095 60.516"
 				rotation="0 2 0"
 				scale="1 1 1"
-				shadow
 			></a-entity>
 			
 			<!-- Olin Hall v1 -->
 			<a-entity
 				gltf-model="#OlinExt"
-				position="53.991 9 94.374"
+				position="53.991 9.564 94.374"
 				rotation="0 89.680 0"
 				scale="1.480 1.000 1.330"
-				shadow
 			></a-entity>
 
 			<!-- Grass plane -->
@@ -192,7 +193,6 @@
 				rotation="-90 0 0" 
 				height="5000" 
 				width="5000" 
-				shadow="cast:false; receive:true"
 			></a-plane>
 			
 			<!-- Campus Roads -->
@@ -201,7 +201,6 @@
 				position="-2.826 0.4 2.316"
 				scale="1.080 1 0.960"
 				rotation="0 90 0"
-				shadow="cast:false; receive:true"
 			></a-entity>
 			
 			<!-- Campus Sidewalks -->
@@ -215,6 +214,78 @@
 				repeat="100 100" -->
 			></a-entity>
 			
+			<!-- Lydia Moss Bradley Statue -->
+			<!	<a-entity			>	
+			<!		gltf-model="#Lydia"	>
+			<!		position="7 10 -24"	>
+			<!		color="#000000"		>	
+			<!	></a-entity>			>
+			
+			<!-- BENCHES -->
+
+			<!-- Founder's circle  -->			
+		
+			<!-- Founder's Circle top right facing Library -->
+			<a-entity
+				gltf-model="#Bench"
+				position="7.000 0.704 -24.152"
+				rotation="0 45 0"
+			></a-entity>		
+
+			<!-- Founder's Circle top left facing BECC -->
+			<a-entity
+				gltf-model="#Bench"
+				position="7.000 0.704 -16.152"
+				rotation="0 135 0"
+			></a-entity>		
+
+			<!-- Founder's Circle bottom left facing BECC -->
+			<a-entity
+				gltf-model="#Bench"
+				position="15.000 0.704 -16.152"
+				rotation="0 -135 0"
+			></a-entity>
+
+			<!-- Founder's Circle bottom right facing Library -->
+			<a-entity
+				gltf-model="#Bench"
+				position="15 0.704 -24.152"
+				rotation="0 -45 0"
+			></a-entity>	
+
+			<!-- TREES -->
+
+			<!-- Bradley Hall Front Right Tree1 -->			
+			<a-entity
+				gltf-model="#Tree1"
+				position="-26.620 -0.351 -58.860"
+				rotation="0 275 0"
+				scale="10 9 10"
+			></a-entity>
+
+			<!-- Long one in front of Olin quad Tree2 -->
+			<a-entity
+				gltf-model="#Tree2"
+				position="9.940 -0.380 11.008"
+				scale="9 9 9"
+			></a-entity>
+
+			<!-- Bradley Hall Front Left Tree3 -->
+			<a-entity
+				gltf-model="#Tree3"
+				position="-14.238 -0.380 17.890"
+				rotation="0 -6.390 0"
+				scale="15 10 15"
+			></a-entity>
+
+			<!-- In front of Westlake Tree4 -->
+			<a-entity
+				gltf-model="#Tree4"
+				position="-1.793 -0.380 73.950"
+				scale="15 15 15"
+			></a-entity>
+
+
 			<!-- Campus Map 
 			<a-plane
 				src="#Map"
@@ -223,9 +294,8 @@
 				rotation="-90 0 0" 
 				height="407.5" 
 				width="346" 
-				
+				-->
 			></a-plane>
-			-->
 		</a-scene>
 	</body>
 </html>
