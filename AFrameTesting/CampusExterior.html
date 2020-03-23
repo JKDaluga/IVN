@@ -1,3 +1,4 @@
+<
 <html>
 	<head>
 		<meta charset="utf-8"/>
@@ -28,38 +29,25 @@
 				}
 			});
 		</script>
-		<!--
 		<script>
-			AFRAME.registerComponent('enable-click-on-hover', {
-			schema: {
-				color: {default: 'red'}
-			},
-
-				init: function () {
+			AFRAME.registerComponent('link-on-click', {
+				schema: {
+					link: {type: 'string'}
+				},
+				
+				init: function () 
+				{
+					var self = this;
 					var data = this.data;
-					var el = this.el;  // <a-box>
-					var defaultColor = el.getAttribute('material').color;
-
-					el.addEventListener('mouseenter', function () {
-						el.setAttribute('color', data.color);
-					});
-
-					el.addEventListener('mouseleave', function () {
-						el.setAttribute('color', defaultColor);
-					});
-				}
-			});
-		</script>
-		-->
-		<script>
-			AFRAME.registerComponent('change-scene', {
-			schema: {
-			},
-
-				init: function () {
-					el.addEventListener('click', function () {
-					});
-				}
+					
+					if (data.link)
+					{
+						el.addEventListener('click', function()
+						{
+							window.location.href = this.data.link;
+						});
+					}
+				},
 			});
 		</script>
 	</head>
@@ -77,16 +65,16 @@
 				<a-asset-item id="WestlakeExt" src="ASSETS/MODELS/WestlakeHallExt.gltf"></a-asset-item>
 				<a-asset-item id="OlinExt" src="ASSETS/MODELS/OlinHallExt.gltf"></a-asset-item>
 				<a-asset-item id="BusEngComplex" src="ASSETS/MODELS/BusinessEngineeringComplex.gltf"></a-asset-item>
-
+				
 				<a-asset-item id="Roads" src="ASSETS/MODELS/CampusRoads_v3.gltf"></a-asset-item>
-				<a-asset-item id="Sidewalks" src="ASSETS/MODELS/Sidewalks_v5.gltf"></a-asset-item>	
+				<a-asset-item id="Sidewalks" src="ASSETS/MODELS/Sidewalks_v5.gltf"></a-asset-item>
 				<a-asset-item id="FoundersCircle" src="ASSETS/MODELS/FoundersCircle.gltf"></a-asset-item>
 				<a-asset-item id="Bench" src="ASSETS/MODELS/Bench/scene.gltf"></a-asset-item>
 				<a-asset-item id="Tree1" src="ASSETS/MODELS/Tree1.gltf"></a-asset-item>
 				<a-asset-item id="Tree2" src="ASSETS/MODELS/Tree2.gltf"></a-asset-item>
 				<a-asset-item id="Tree3" src="ASSETS/MODELS/Tree3.gltf"></a-asset-item>
 				<a-asset-item id="Tree4" src="ASSETS/MODELS/Tree4.gltf"></a-asset-item>
-
+				
 				<img id="Grass" src="ASSETS/TEXTURES/Grass.jpg"></img>
 				<img id="Map" src="ASSETS/CampusMap.png"></img>
 			</a-assets>
@@ -102,7 +90,7 @@
 				position="122.846 166.815 -126.305">
 			</a-entity>
 
-			
+			<!-- Player/User Object-->
 			<a-entity
 				position="0 1.6 2"
 				camera
@@ -116,15 +104,16 @@
 				</a-entity>
 			</a-entity>
 
-			<!-- JS test
+			<!-- JS test -->
 			<a-box 
 				color="#EF2D5E" 
 				position="0 1 -4" 
 				change-color-on-hover="color: blue"
+				link="href: BradleyHall2F.html"
 			></a-box>
-			-->
+			
 
-			<!-- All Buildings Prototype 
+			<!-- All Buildings Prototype
 			<a-entity
 				gltf-model="#Buildings"
 				rotation="0 2 0"
@@ -216,7 +205,6 @@
 				gltf-model="#Sidewalks"
 				position="-2.826 0.2 2.316"
 				shadow="cast:false; receive:true"
-				shadow="cast:false; receive:true"
 				<!-- scale="1.080 1 0.960"
 				rotation="0 90 0"
 				src="#Sidewalks"
@@ -266,7 +254,7 @@
 				rotation="0 -50 0"
 				shadow
 			></a-entity>	
-
+			
 			<!-- TREES -->
 
 			<!-- Bradley Hall Front Right Tree1 -->			
@@ -302,8 +290,7 @@
 				scale="15 15 15"
 				shadow
 			></a-entity>
-
-
+			
 			<!-- Campus Map 
 			<a-plane
 				src="#Map"
@@ -312,6 +299,7 @@
 				rotation="-90 0 0" 
 				height="407.5" 
 				width="346" 
+				
 			></a-plane>
 			-->
 		</a-scene>
