@@ -9,13 +9,25 @@
       <a-entity camera look-controls="pointerLockEnabled: true;" position="0 1.6 0"></a-entity>
     </a-entity>
 
+
+    <a-assets>
+      <a-asset-item id="nav-mesh" src="AFrameTesting/ASSETS/MODELS/NavMesh2.gltf"></a-asset-item>
+    </a-assets>
+
+    <a-entity
+    gltf-model="#nav-mesh"
+    position="0 0 0"
+    rotation="0 0 0"
+    nav-mesh
+  ></a-entity>	
+
     <!-- STAGE -->
-    <a-entity scale="0.5 1 1">
+    <!--<a-entity scale="0.5 1 1">
       <a-entity geometry="primitive: plane; height: 10; width: 10;" material="color: indigo; side: double;"
         rotation="-90 0 0" nav-mesh></a-entity>
         <a-entity position="10 0 0" geometry="primitive: plane; height: 4; width: 10;" material="color: yellow; side: double;"
         rotation="-90 0 0" nav-mesh></a-entity>
-    </a-entity>
+    </a-entity>-->
 
   </a-scene>
 
