@@ -1,3 +1,4 @@
+
 <html>
 	<head>
 		<meta charset="utf-8"/>
@@ -65,20 +66,21 @@
 				<a-asset-item id="WestlakeExt" src="ASSETS/MODELS/WestlakeHallExt.gltf"></a-asset-item>
 				<a-asset-item id="OlinExt" src="ASSETS/MODELS/OlinHallExt.gltf"></a-asset-item>
 				<a-asset-item id="BusEngComplex" src="ASSETS/MODELS/BusinessEngineeringComplex.gltf"></a-asset-item>
-				<a-asset-item id="Library" src="ASSETS/MODELS/LibraryTextured.gltf"></a-asset-item>
 				
 				<a-asset-item id="Roads" src="ASSETS/MODELS/CampusRoads_v3.gltf"></a-asset-item>
 				<a-asset-item id="Sidewalks" src="ASSETS/MODELS/Sidewalks_v5.gltf"></a-asset-item>
 				<a-asset-item id="FoundersCircle" src="ASSETS/MODELS/FoundersCircle.gltf"></a-asset-item>
 				<a-asset-item id="Bench" src="ASSETS/MODELS/Bench/scene.gltf"></a-asset-item>
 				<a-asset-item id="WhiteBench" src="ASSETS/MODELS/whitebench.gltf"></a-asset-item>
-
 				<a-asset-item id="Tree1" src="ASSETS/MODELS/Tree1.gltf"></a-asset-item>
 				<a-asset-item id="Tree2" src="ASSETS/MODELS/Tree2.gltf"></a-asset-item>
 				<a-asset-item id="Tree3" src="ASSETS/MODELS/Tree3.gltf"></a-asset-item>
 				<a-asset-item id="Tree4" src="ASSETS/MODELS/Tree4.gltf"></a-asset-item>
+				<a-asset-item id="Bush1" src="ASSETS/MODELS/Bush1.gltf"></a-asset-item>
 				<a-asset-item id="nav-mesh" src="ASSETS/MODELS/NavMesh2.gltf"></a-asset-item>
-
+				
+				<a-asset-item id="BHallDoor" src="ASSETS/MODELS/DoorBradleyHall.gltf"></a-asset-item>
+				
 				<img id="Grass" src="ASSETS/TEXTURES/Grass.jpg"></img>
 				<img id="Map" src="ASSETS/CampusMap.png"></img>
 			</a-assets>
@@ -104,7 +106,7 @@
 					material="color: black; shader: flat">
 				</a-entity>
 			</a-entity>
-
+			
 			<!-- Navmesh -->
 			<a-entity gltf-model="#nav-mesh"
 			  position="0 .1 0"
@@ -113,14 +115,14 @@
 			  visible="false"
 			></a-entity>
 
-			<!-- JS test -->
+			<!-- JS test 
 			<a-box 
 				color="#EF2D5E" 
 				position="0 1 -4" 
 				change-color-on-hover="color: blue"
 				link="href: BradleyHall2F.html"
 			></a-box>
-			
+			-->
 
 			<!-- All Buildings Prototype
 			<a-entity
@@ -131,20 +133,33 @@
 			-->
 			
 			<!-- Bradley Hall v1 -->
-			<a-entity
-				gltf-model="#BradleyHallExtTextured"
-				position="-81.2 -0.090 -18.631"
-				rotation="0 2 0"
-				shadow
-			></a-entity>
-			
-			<!-- Link to BHall 2F -->
-			<a-link 
-				href="BradleyHall2F.html" 
-				title="Bradley Hall - 2nd Floor" 
-				position="-42 1 -42"
-				rotation="0 90 0"
-			></a-link>
+			<a-entity>
+				<!-- Building Model -->
+				<a-entity
+					gltf-model="#BradleyHallExtTextured"
+					position="-81.2 -0.090 -18.631"
+					rotation="0 2 0"
+					shadow
+				></a-entity>
+				
+				<!-- Front Door -->
+				<a-entity
+					gltf-model="#BHallDoor"
+					scale="0.02 0.02 0.022"
+					rotation="0 0.2 0"
+					position="-44.340 0.861 -19.808"
+					link="href: BradleyHall2F.html"
+				></a-entity>
+				
+				<!-- Link to BHall 2F 
+				<a-link 
+					href="BradleyHall2F.html" 
+					title="Bradley Hall - 2nd Floor" 
+					position="-42 1 -42"
+					rotation="0 90 0"
+				></a-link>
+				-->
+			</a-entity>
 			
 			<!-- Hartman Center v1 -->
 			<a-entity
@@ -175,15 +190,6 @@
 			<a-entity
 				gltf-model="#WestlakeExt"
 				position="-68.801 4.095 60.516"
-				rotation="0 2 0"
-				scale="1 1 1"
-				shadow
-			></a-entity>
-
-			<!--Library Textured v1 -->
-			<a-entity
-				gltf-model="#Library"
-				position="-33.887 0.117 127.858"
 				rotation="0 2 0"
 				scale="1 1 1"
 				shadow
@@ -237,95 +243,89 @@
 				shadow
 			></a-entity>
 			
-			<!-- BENCHES -->
-
 			<!-- Bhall White Benches -->
+			<a-entity>
+				<!-- Right top bench-->
+				<a-entity
+					gltf-model="#WhiteBench"
+					position="-27.424 0.102 -25.200"
+					rotation="0 90 0"
+				></a-entity>
+
+				<!-- Right middle bench -->
+				<a-entity
+					gltf-model="#WhiteBench"
+					position="-23.000 0.102 -26.234"
+					rotation="0 0 0"
+				></a-entity>
+
+				<!-- Right bottom bench -->
+				<a-entity
+					gltf-model="#WhiteBench"
+					position="-19.000 0.102 -25.200"
+					rotation="0 90 0"
+				></a-entity>
+
+				<!-- Left top bench-->
+				<a-entity
+					gltf-model="#WhiteBench"
+					position="-27.424 0.102 -15.200"
+					rotation="0 90 0"
+				></a-entity>
+
+				<!-- Left middle bench -->
+				<a-entity
+					gltf-model="#WhiteBench"
+					position="-23.000 0.102 -13.860"
+					rotation="0 0 0"
+				></a-entity>
+
+				<!-- Left bottom bench -->
+				<a-entity
+					gltf-model="#WhiteBench"
+					position="-19.000 0.102 -15.200"
+					rotation="0 90 0"
+				></a-entity>
+			</a-entity>
 			
-			<!-- Right top bench-->
-			<a-entity
-				gltf-model="#WhiteBench"
-				position="-27.424 0.102 -24.680"
-				rotation="0 90 0"
-				scale="0.8 0.8 0.8"
-			></a-entity>
+			
+			<!-- BENCHES -->
+			<a-entity>
+				<!-- Founder's circle Benches  -->			
+				<a-entity>
+					<!-- Founder's Circle top right facing Library -->
+					<a-entity
+						gltf-model="#Bench"
+						position="7.500 1.350 -22.010"
+						rotation="0 53 0"
+						shadow
+					></a-entity>		
 
-			<!-- Right middle bench -->
-			<a-entity
-				gltf-model="#WhiteBench"
-				position="-23.000 0.102 -23.370"
-				rotation="0 0 0"
-				scale="0.8 0.8 0.8"
-			></a-entity>
+					<!-- Founder's Circle top left facing BECC -->
+					<a-entity
+						gltf-model="#Bench"
+						position="7.500 1.350 -17.500"
+						rotation="0 127 0"
+						shadow
+					></a-entity>		
 
-			<!-- Right bottom bench -->
-			<a-entity
-				gltf-model="#WhiteBench"
-				position="-19.000 0.102 -24.680"
-				rotation="0 90 0"
-				scale="0.8 0.8 0.8"
-			></a-entity>
+					<!-- Founder's Circle bottom left facing BECC -->
+					<a-entity
+						gltf-model="#Bench"
+						position="11.400 1.350 -17.500"
+						rotation="0 -132 0"
+						shadow
+					></a-entity>
 
-			<!-- Left top bench-->
-			<a-entity
-				gltf-model="#WhiteBench"
-				position="-27.424 0.102 -15.200"
-				rotation="0 90 0"
-				scale="0.8 0.8 0.8"
-			></a-entity>
-
-			<!-- Left middle bench -->
-			<a-entity
-				gltf-model="#WhiteBench"
-				position="-23.000 0.102 -16.460"
-				rotation="0 0 0"
-				scale="0.8 0.8 0.8"
-			></a-entity>
-
-			<!-- Left bottom bench -->
-			<a-entity
-				gltf-model="#WhiteBench"
-				position="-19.000 0.102 -15.200"
-				rotation="0 90 0"
-				scale="0.8 0.8 0.8"
-			></a-entity>
-
-			<!-- Founder's circle Benches  -->			
-		
-			<!-- Founder's Circle top right facing Library -->
-			<a-entity
-				gltf-model="#Bench"
-				position="7.500 0.969 -22.010"
-				rotation="0 53 0"
-				scale="0.7 0.6 0.7"
-				shadow
-			></a-entity>		
-
-			<!-- Founder's Circle top left facing BECC -->
-			<a-entity
-				gltf-model="#Bench"
-				position="7.500 0.969 -17.500"
-				rotation="0 127 0"
-				scale="0.7 0.6 0.7"
-				shadow
-			></a-entity>		
-
-			<!-- Founder's Circle bottom left facing BECC -->
-			<a-entity
-				gltf-model="#Bench"
-				position="11.400 0.969 -17.500"
-				rotation="0 -132 0"
-				scale="0.7 0.6 0.7"
-				shadow
-			></a-entity>
-
-			<!-- Founder's Circle bottom right facing Library -->
-			<a-entity
-				gltf-model="#Bench"
-				position="11.400 0.969 -22.010"
-				rotation="0 -50 0"
-				scale="0.7 0.6 0.7"
-				shadow
-			></a-entity>	
+					<!-- Founder's Circle bottom right facing Library -->
+					<a-entity
+						gltf-model="#Bench"
+						position="11.400 1.350 -22.010"
+						rotation="0 -50 0"
+						shadow
+					></a-entity>
+				</a-entity>
+			</a-entity>	
 			
 			<!-- TREES -->
 
@@ -362,6 +362,444 @@
 				scale="15 15 15"
 				shadow
 			></a-entity>
+			
+			<!-- Founder's Circle Flora -->
+		
+			<!-- Founder's Circle Bushes -->
+			<a-entity>
+				<!-- Lower Half Bushes -->
+				<a-entity>
+					<!-- Lower Right Quadrant Bushes -->
+					<a-entity>
+						<a-entity
+							gltf-model="#Bush1"
+							position="19.036 0.756 -22.065"
+							scale="0.500 0.500 0.500"
+							shadow
+						></a-entity>
+						<a-entity
+							gltf-model="#Bush1"
+							position="17.966 0.756 -22.065"
+							scale="0.500 0.500 0.500"
+							shadow
+						></a-entity>
+						<a-entity
+							gltf-model="#Bush1"
+							position="16.826 0.756 -22.065"
+							scale="0.500 0.500 0.500"
+							shadow
+						></a-entity>
+						<a-entity
+							gltf-model="#Bush1"
+							position="16.176 0.756 -22.958"
+							scale="0.500 0.500 0.500"
+							shadow
+						></a-entity>
+						<a-entity
+							gltf-model="#Bush1"
+							position="15.530 0.756 -23.753"
+							scale="0.500 0.500 0.500"
+							shadow
+						></a-entity>
+						<a-entity
+							gltf-model="#Bush1"
+							position="14.797 0.756 -24.499"
+							scale="0.500 0.500 0.500"
+							shadow
+						></a-entity>
+						<a-entity
+							gltf-model="#Bush1"
+							position="14.838 0.756 -25.486"
+							scale="0.500 0.500 0.500"
+							shadow
+						></a-entity>
+						<a-entity
+							gltf-model="#Bush1"
+							position="14.760 0.756 -26.512"
+							scale="0.500 0.500 0.500"
+							shadow
+						></a-entity>
+						<a-entity
+							gltf-model="#Bush1"
+							position="14.760 0.756 -27.572"
+							scale="0.500 0.500 0.500"
+							shadow
+						></a-entity>
+						<a-entity
+							gltf-model="#Bush1"
+							position="14.760 0.756 -28.599"
+							scale="0.500 0.500 0.500"
+							shadow
+						></a-entity>
+						<a-entity
+							gltf-model="#Bush1"
+							position="14.760 0.756 -27.572"
+							scale="0.500 0.500 0.500"
+							shadow
+						></a-entity>
+						<a-entity
+							gltf-model="#Bush1"
+							position="14.760 0.756 -28.599"
+							scale="0.500 0.500 0.500"
+							shadow
+						></a-entity>
+						<a-entity
+							gltf-model="#Bush1"
+							position="14.760 0.756 -29.661"
+							scale="0.500 0.500 0.500"
+							shadow
+						></a-entity>
+						<a-entity
+							gltf-model="#Bush1"
+							position="14.760 0.756 -30.715"
+							scale="0.500 0.500 0.500"
+							shadow
+						></a-entity>
+						<a-entity
+							gltf-model="#Bush1"
+							position="14.760 0.756 -31.775"
+							scale="0.500 0.500 0.500"
+							shadow
+						></a-entity>
+					</a-entity>
+			
+					<!-- Lower Left Quadrant Bushes -->
+					<a-entity
+						scale="1 1 -1"
+						position="0.209 0 -39.622">			
+						<a-entity
+							gltf-model="#Bush1"
+							position="19.036 0.756 -22.065"
+							scale="0.500 0.500 0.500"
+							shadow
+						></a-entity>
+						<a-entity
+							gltf-model="#Bush1"
+							position="17.966 0.756 -22.065"
+							scale="0.500 0.500 0.500"
+							shadow
+						></a-entity>
+						<a-entity
+							gltf-model="#Bush1"
+							position="16.826 0.756 -22.065"
+							scale="0.500 0.500 0.500"
+							shadow
+						></a-entity>
+						<a-entity
+							gltf-model="#Bush1"
+							position="16.176 0.756 -22.958"
+							scale="0.500 0.500 0.500"
+							shadow
+						></a-entity>
+						<a-entity
+							gltf-model="#Bush1"
+							position="15.530 0.756 -23.753"
+							scale="0.500 0.500 0.500"
+							shadow
+						></a-entity>
+						<a-entity
+							gltf-model="#Bush1"
+							position="14.797 0.756 -24.499"
+							scale="0.500 0.500 0.500"
+							shadow
+						></a-entity>
+						<a-entity
+							gltf-model="#Bush1"
+							position="14.838 0.756 -25.486"
+							scale="0.500 0.500 0.500"
+							shadow
+						></a-entity>
+						<a-entity
+							gltf-model="#Bush1"
+							position="14.760 0.756 -26.512"
+							scale="0.500 0.500 0.500"
+							shadow
+						></a-entity>
+						<a-entity
+							gltf-model="#Bush1"
+							position="14.760 0.756 -27.572"
+							scale="0.500 0.500 0.500"
+							shadow
+						></a-entity>
+						<a-entity
+							gltf-model="#Bush1"
+							position="14.760 0.756 -28.599"
+							scale="0.500 0.500 0.500"
+							shadow
+						></a-entity>
+						<a-entity
+							gltf-model="#Bush1"
+							position="14.760 0.756 -27.572"
+							scale="0.500 0.500 0.500"
+							shadow
+						></a-entity>
+						<a-entity
+							gltf-model="#Bush1"
+							position="14.760 0.756 -28.599"
+							scale="0.500 0.500 0.500"
+							shadow
+						></a-entity>
+						<a-entity
+							gltf-model="#Bush1"
+							position="14.760 0.756 -29.661"
+							scale="0.500 0.500 0.500"
+							shadow
+						></a-entity>
+						<a-entity
+							gltf-model="#Bush1"
+							position="14.760 0.756 -30.715"
+							scale="0.500 0.500 0.500"
+							shadow
+						></a-entity>
+						<a-entity
+							gltf-model="#Bush1"
+							position="14.760 0.756 -31.775"
+							scale="0.500 0.500 0.500"
+							shadow
+						></a-entity>
+					</a-entity>
+				</a-entity>
+			
+				<!-- Upper Half Bushes -->
+				<a-entity
+					scale="-1 1 1"
+					position="18.780 0 0">
+			
+					<!-- Upper Right Quadrant Bushes -->
+					<a-entity>
+						<a-entity
+							gltf-model="#Bush1"
+							position="19.036 0.756 -22.065"
+							scale="0.500 0.500 0.500"
+							shadow
+						></a-entity>
+						<a-entity
+							gltf-model="#Bush1"
+							position="17.966 0.756 -22.065"
+							scale="0.500 0.500 0.500"
+							shadow
+						></a-entity>
+						<a-entity
+							gltf-model="#Bush1"
+							position="16.826 0.756 -22.065"
+							scale="0.500 0.500 0.500"
+							shadow
+						></a-entity>
+						<a-entity
+							gltf-model="#Bush1"
+							position="16.176 0.756 -22.958"
+							scale="0.500 0.500 0.500"
+							shadow
+						></a-entity>
+						<a-entity
+							gltf-model="#Bush1"
+							position="15.530 0.756 -23.753"
+							scale="0.500 0.500 0.500"
+							shadow
+						></a-entity>
+						<a-entity
+							gltf-model="#Bush1"
+							position="14.797 0.756 -24.499"
+							scale="0.500 0.500 0.500"
+							shadow
+						></a-entity>
+						<a-entity
+							gltf-model="#Bush1"
+							position="14.838 0.756 -25.486"
+							scale="0.500 0.500 0.500"
+							shadow
+						></a-entity>
+						<a-entity
+							gltf-model="#Bush1"
+							position="14.760 0.756 -26.512"
+							scale="0.500 0.500 0.500"
+							shadow
+						></a-entity>
+						<a-entity
+							gltf-model="#Bush1"
+							position="14.760 0.756 -27.572"
+							scale="0.500 0.500 0.500"
+							shadow
+						></a-entity>
+						<a-entity
+							gltf-model="#Bush1"
+							position="14.760 0.756 -28.599"
+							scale="0.500 0.500 0.500"
+							shadow
+						></a-entity>
+						<a-entity
+							gltf-model="#Bush1"
+							position="14.760 0.756 -27.572"
+							scale="0.500 0.500 0.500"
+							shadow
+						></a-entity>
+						<a-entity
+							gltf-model="#Bush1"
+							position="14.760 0.756 -28.599"
+							scale="0.500 0.500 0.500"
+							shadow
+						></a-entity>
+						<a-entity
+							gltf-model="#Bush1"
+							position="14.760 0.756 -29.661"
+							scale="0.500 0.500 0.500"
+							shadow
+						></a-entity>
+						<a-entity
+							gltf-model="#Bush1"
+							position="14.760 0.756 -30.715"
+							scale="0.500 0.500 0.500"
+							shadow
+						></a-entity>
+						<a-entity
+							gltf-model="#Bush1"
+							position="14.760 0.756 -31.775"
+							scale="0.500 0.500 0.500"
+							shadow
+						></a-entity>
+					</a-entity>
+			
+					<!-- Upper Left Quadrant Bushes -->
+					<a-entity
+						scale="1 1 -1"
+						position="0.209 0 -39.622">			
+						<a-entity
+							gltf-model="#Bush1"
+							position="19.036 0.756 -22.065"
+							scale="0.500 0.500 0.500"
+							shadow
+						></a-entity>
+						<a-entity
+							gltf-model="#Bush1"
+							position="17.966 0.756 -22.065"
+							scale="0.500 0.500 0.500"
+							shadow
+						></a-entity>
+						<a-entity
+							gltf-model="#Bush1"
+							position="16.826 0.756 -22.065"
+							scale="0.500 0.500 0.500"
+							shadow
+						></a-entity>
+						<a-entity
+							gltf-model="#Bush1"
+							position="16.176 0.756 -22.958"
+							scale="0.500 0.500 0.500"
+							shadow
+						></a-entity>
+						<a-entity
+							gltf-model="#Bush1"
+							position="15.530 0.756 -23.753"
+							scale="0.500 0.500 0.500"
+							shadow
+						></a-entity>
+						<a-entity
+							gltf-model="#Bush1"
+							position="14.797 0.756 -24.499"
+							scale="0.500 0.500 0.500"
+							shadow
+						></a-entity>
+						<a-entity
+							gltf-model="#Bush1"
+							position="14.838 0.756 -25.486"
+							scale="0.500 0.500 0.500"
+							shadow
+						></a-entity>
+						<a-entity
+							gltf-model="#Bush1"
+							position="14.760 0.756 -26.512"
+							scale="0.500 0.500 0.500"
+							shadow
+						></a-entity>
+						<a-entity
+							gltf-model="#Bush1"
+							position="14.760 0.756 -27.572"
+							scale="0.500 0.500 0.500"
+							shadow
+						></a-entity>
+						<a-entity
+							gltf-model="#Bush1"
+							position="14.760 0.756 -28.599"
+							scale="0.500 0.500 0.500"
+							shadow
+						></a-entity>
+						<a-entity
+							gltf-model="#Bush1"
+							position="14.760 0.756 -27.572"
+							scale="0.500 0.500 0.500"
+							shadow
+						></a-entity>
+						<a-entity
+							gltf-model="#Bush1"
+							position="14.760 0.756 -28.599"
+							scale="0.500 0.500 0.500"
+							shadow
+						></a-entity>
+						<a-entity
+							gltf-model="#Bush1"
+							position="14.760 0.756 -29.661"
+							scale="0.500 0.500 0.500"
+							shadow
+						></a-entity>
+						<a-entity
+							gltf-model="#Bush1"
+							position="14.760 0.756 -30.715"
+							scale="0.500 0.500 0.500"
+							shadow
+						></a-entity>
+						<a-entity
+							gltf-model="#Bush1"
+							position="14.760 0.756 -31.775"
+							scale="0.500 0.500 0.500"
+							shadow
+						></a-entity>
+					</a-entity>
+				</a-entity>
+			</a-entity>
+			
+			<!-- Founder's Circle Trees -->
+			<a-entity>
+			
+				<!-- Lower Right Quadrant Tree -->
+				<a-entity
+					gltf-model="#Tree2"
+					position="-25.268 -0.380 -26.044"
+					scale="10.000 5.970 10.000"
+					shadow
+				></a-entity>
+			
+				<!-- Lower Right Quadrant Tree -->
+				<a-entity
+					gltf-model="#Tree2"
+					position="-25.268 -0.380 -26.044"
+					scale="10.000 5.970 10.000"
+					shadow
+				></a-entity>
+				
+				<!-- Upper Right Quadrant Tree -->
+				<a-entity
+					gltf-model="#Tree2"
+					position="-36.058 -0.380 -26.044"
+					scale="10.000 5.970 10.000"
+					shadow
+				></a-entity>
+				
+				<!-- Upper Left Quadrant Tree -->
+				<a-entity
+					gltf-model="#Tree2"
+					position="-27.859 -0.193 -12.162"
+					scale="8.000 5.000 8.000"
+					shadow
+				></a-entity>
+				
+				<!-- Lower Left Quadrant Tree -->
+				<a-entity
+					gltf-model="#Tree2"
+					position="-9.557 -0.193 -13.938"
+					scale="6.000 4.000 6.000"
+					shadow
+				></a-entity>
+			</a-entity>
 			
 			<!-- Campus Map 
 			<a-plane
