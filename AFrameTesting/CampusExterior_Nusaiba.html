@@ -66,6 +66,7 @@
 				<a-asset-item id="WestlakeExt" src="ASSETS/MODELS/WestlakeHallExt.gltf"></a-asset-item>
 				<a-asset-item id="OlinExt" src="ASSETS/MODELS/OlinHallExt.gltf"></a-asset-item>
 				<a-asset-item id="BusEngComplex" src="ASSETS/MODELS/BusinessEngineeringComplex.gltf"></a-asset-item>
+				<a-asset-item id="Library" src="ASSETS/MODELS/LibraryTextured.gltf"></a-asset-item>
 				
 				<a-asset-item id="Roads" src="ASSETS/MODELS/CampusRoads_v3.gltf"></a-asset-item>
 				<a-asset-item id="Sidewalks" src="ASSETS/MODELS/Sidewalks_v5.gltf"></a-asset-item>
@@ -194,6 +195,15 @@
 				scale="1 1 1"
 				shadow
 			></a-entity>
+
+			<!--Library Textured v1 -->
+			<a-entity
+				gltf-model="#Library"
+				position="-33.887 0.117 127.858"
+				rotation="0 2 0"
+				scale="1 1 1"
+				shadow
+			></a-entity>
 			
 			<!-- Olin Hall v1 -->
 			<a-entity
@@ -287,8 +297,9 @@
 					rotation="0 90 0"
 				></a-entity>
 			</a-entity>
-			
-			
+		
+			<!-- STREET LAMPS -->
+
 			<!-- BENCHES -->
 			<a-entity>
 				<!-- Bradley Hall front right entrance benches -->
@@ -327,6 +338,16 @@
 					shadow
 				></a-entity>
 
+				<!-- Library exterior benches -->
+				<a-entity
+					gltf-model="#Bench"
+					position="-36.923 0.700 93.484"
+					rotation="0 122.110 0"
+					scale="0.750 0.750 0.750"
+					shadow
+				></a-entity>
+
+
 				<!-- Founder's circle Benches  -->			
 				<a-entity
 					position="3.380 0.100 -4.840"
@@ -364,6 +385,15 @@
 						shadow
 					></a-entity>
 				</a-entity>
+
+				<!-- Student Center entrance bench -->
+				<a-entity
+					gltf-model="#Bench"
+					position="106.031 0.750 -104.460"
+					rotation="0 107.000 0"
+					scale="0.750 0.750 0.750"
+					shadow
+				></a-entity>
 			</a-entity>	
 			
 			<!-- TREES -->
