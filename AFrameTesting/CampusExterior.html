@@ -60,18 +60,19 @@
 			<a-assets>
 				<a-asset-item id="Buildings" src="ASSETS/MODELS/FullCampus.gltf"></a-asset-item>
 				<a-asset-item id="BradleyHallExt" src="ASSETS/MODELS/BradleyHallExt.gltf"></a-asset-item>
-				<a-asset-item id="BradleyHallExtTextured" src="ASSETS/MODELS/BradleyHallExtTextured_v4.gltf"></a-asset-item>
-				<a-asset-item id="HartmanCenter" src="ASSETS/MODELS/HartmanCenter.gltf"></a-asset-item>
+				<a-asset-item id="BradleyHallExtTextured" src="ASSETS/MODELS/BradleyHallExtTexturedV5.gltf"></a-asset-item>
+				<a-asset-item id="HartmanCenter" src="ASSETS/MODELS/HartmanTexturedV1.gltf"></a-asset-item>
 				<a-asset-item id="SwordsHallExt" src="ASSETS/MODELS/SwordsHallExt.gltf"></a-asset-item>
-				<a-asset-item id="WestlakeExt" src="ASSETS/MODELS/WestlakeV0.5.gltf"></a-asset-item>
+				<a-asset-item id="WestlakeExt" src="ASSETS/MODELS/WestlakeV0.6.gltf"></a-asset-item>
 				<a-asset-item id="OlinExt" src="ASSETS/MODELS/OlinHallExt.gltf"></a-asset-item>
 				<a-asset-item id="BusEngComplex" src="ASSETS/MODELS/BusinessEngineeringComplex.gltf"></a-asset-item>
-				<a-asset-item id="Library" src="ASSETS/MODELS/LibraryV2.gltf"></a-asset-item>
+				<a-asset-item id="Library" src="ASSETS/MODELS/LibraryTexturedV2.gltf"></a-asset-item>
 				
 				<a-asset-item id="Roads" src="ASSETS/MODELS/CampusRoads_v3.gltf"></a-asset-item>
 				<a-asset-item id="Sidewalks" src="ASSETS/MODELS/SidewalksV7.gltf"></a-asset-item>
 				<a-asset-item id="FoundersCircle" src="ASSETS/MODELS/FoundersCircle.gltf"></a-asset-item>
 				<a-asset-item id="CircleCurb" src="ASSETS/MODELS/CurbV5.gltf"></a-asset-item>
+				<a-asset-item id="BradleyGrounds" src="ASSETS/MODELS/BradleyGrounds.gltf"></a-asset-item>
 				
 				<a-asset-item id="Bench" src="ASSETS/MODELS/Bench/scene.gltf"></a-asset-item>
 				<a-asset-item id="WhiteBench" src="ASSETS/MODELS/whitebench.gltf"></a-asset-item>
@@ -101,13 +102,15 @@
 
 			<!-- Player/User Object-->
 			<a-entity id="rig" movement-controls="constrainToNavMesh: true;">
-				<a-entity camera look-controls="pointerLockEnabled: true;" position="0 1.6 0"></a-entity>
-				<a-entity 
-					cursor="fuse: true; fuseTimeout: 500"
-					position="0 0 -1"
-					geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03"
-					material="color: black; shader: flat">
+				<a-entity camera look-controls="pointerLockEnabled: true;" position="0 1.6 0">
+					<a-entity 
+						cursor="fuse: true; fuseTimeout: 500"
+						position="0 0 -1"
+						geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03"
+						material="color: black; shader: flat">
+					</a-entity>
 				</a-entity>
+
 			</a-entity>
 			
 			<!-- Navmesh -->
@@ -157,14 +160,15 @@
 					link="href: BradleyHall2F.html"
 				></a-entity>
 				
-				<!-- Link to BHall 2F 
+				<!-- Link to BHall 2F
 				<a-link 
 					href="BradleyHall2F.html" 
 					title="Bradley Hall - 2nd Floor" 
 					position="-42 1 -42"
 					rotation="0 90 0"
-				></a-link>
 				-->
+				></a-link>
+				
 			</a-entity>
 			
 			<!--Library Textured v1 -->
@@ -258,11 +262,18 @@
 				shadow="cast:false; receive:true">
 				<a-entity
 					gltf-model="#CircleCurb"
-					position="0.810 -0.010 0.150
-					scale="0.980 0 0.980"
+					position="1.245 -0.010 1.011"
+					scale="0.950 0 0.910"
 					shadow="cast:false; receive:true">
 				</a-entity>
 			</a-entity>
+			
+			<!-- Combined ground planes
+			<a-entity
+				gltf-model="#BradleyGrounds"
+				shadow="cast:false; receive:true">
+			</a-entity>
+			-->
 			
 			<!-- Bhall Front Decor -->
 			<a-entity
@@ -577,6 +588,136 @@
 			</a-entity>	
 			
 			<!-- TREES -->
+			
+			<!-- Relative to Bradley -->
+			
+			<!-- Smaller tree, front & far left -->
+			<a-entity
+				gltf-model="#Tree1"
+				position="-4.226 -2.082 -0.411"
+				rotation="0 275.000 0"
+				scale="5 6 5"
+				shadow
+			></a-entity>
+			
+			<!-- Larger tree, front & far left -->
+			<a-entity
+				gltf-model="#Tree2"
+				position="-2.051 -0.188 63.379"
+				rotation="0 110.000 0"
+				scale="12.000 7.490 11.990"
+				shadow
+			></a-entity>
+			
+			<!-- Relative to Westlake -->
+			
+			<!-- Between Westlake and Bradley Hall -->
+			<a-entity
+				gltf-model="#Tree2"
+				position="-102.884 -0.042 25.819"
+				scale="12.000 7.490 11.990"
+				shadow
+			></a-entity>
+			
+			<!-- Small in front of Westlake, right -->
+			<a-entity
+				gltf-model="#Tree2"
+				position="-59.837 -0.042 61.986"
+				rotation="0 149.000 0"
+				scale="2.000 2.000 2.000"
+				shadow
+			></a-entity>
+			
+			<!-- Relative to Olin -->
+			
+			<!-- In front of Olin #1 -->
+			<a-entity
+				gltf-model="#Tree4"
+				position="55.676 -6.732 45.286"
+				rotation="0 149.000 0"
+				scale="15.000 17.000 15.000"
+				shadow
+			></a-entity>
+			
+			<!-- In front of Olin #2 -->
+			<a-entity
+				gltf-model="#Tree2"
+				position="27.505 -0.380 47.853"
+				rotation="0 0 0"
+				scale="15 9 15"
+				shadow
+			></a-entity>
+			
+			<!-- In front of Olin #3 -->
+			<a-entity
+				gltf-model="#Tree4"
+				position="100.354 -7.262 34.225"
+				rotation="0 90.000 0"
+				scale="18 20 15"
+				shadow
+			></a-entity>
+			
+			<!-- In front of Olin #4 -->
+			<a-entity
+				gltf-model="#Tree4"
+				position="95.126 -4.181 11.008"
+				rotation="20.000 90.000 -0.400"
+				scale="20 20 17"
+				shadow
+			></a-entity>
+			
+			<!-- In front of Olin #5 -->
+			<a-entity
+				gltf-model="#Tree2"
+				position="65.764 -0.380 46.213"
+				rotation="-6.640 0 -2.830"
+				scale="9 9 9"
+				shadow
+			></a-entity>
+			
+			<!-- In front of Olin #6 -->
+			<a-entity
+				gltf-model="#Tree2"
+				position="107.253 -0.380 44.138"
+				rotation="8.000 180.000 -2.830"
+				scale="9 9 9"
+				shadow
+			></a-entity>
+			
+			<!-- In front of Olin, next to W. St. James St, small -->
+			<a-entity
+				gltf-model="#Tree2"
+				position="64.804 -0.113 2.998"
+				rotation="0 -25.110 0"
+				scale="5.860 3.100 5.860"
+				shadow
+			></a-entity>
+			
+			<!-- In front of Olin, next to W. St. James St, large left -->
+			<a-entity
+				gltf-model="#Tree1"
+				position="74.593 -1.522 23.449"
+				rotation="0 135.000 0"
+				scale="6.890 7.000 6.580"
+				shadow
+			></a-entity>
+			
+			<!-- In front of Olin, next to W. St. James St, large right -->
+			<a-entity
+				gltf-model="#Tree2"
+				position="-9.498 -0.380 10.509"
+				scale="13.560 6.470 13.500"
+				shadow
+			></a-entity>
+			
+			<!-- In front of Olin, near W. St. James St., closer to Olin -->
+			<a-entity
+				gltf-model="#Tree2"
+				position="65.792 -0.380 -31.910"
+				rotation="0 -90 0"
+				scale="13.560 7.5 13.500"
+				shadow
+			></a-entity>
 
 			<!-- Bradley Hall Front Right Tree1 -->			
 			<a-entity
@@ -588,21 +729,7 @@
 			></a-entity>
 
 			<!-- Long one in front of Olin quad Tree2 -->
-			<a-entity
-				gltf-model="#Tree2"
-				position="9.940 -0.380 11.008"
-				scale="9 9 9"
-				shadow
-			></a-entity>
 
-			<!-- Bradley Hall Front Left Tree3 -->
-			<a-entity
-				gltf-model="#Tree3"
-				position="-14.238 -0.380 17.890"
-				rotation="0 -6.390 0"
-				scale="15 10 15"
-				shadow
-			></a-entity>
 
 			<!-- In front of Westlake Tree4 -->
 			<a-entity
@@ -1011,7 +1138,7 @@
 				></a-entity>
 			</a-entity>
 			
-			<!-- Campus Map 
+			<!-- Campus Map  
 			<a-plane
 				src="#Map"
 				opacity="0.5"
@@ -1019,7 +1146,6 @@
 				rotation="-90 0 0" 
 				height="407.5" 
 				width="346" 
-				
 			></a-plane>
 			-->
 		</a-scene>
