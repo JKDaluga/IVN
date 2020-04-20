@@ -140,27 +140,27 @@
 			></a-entity>
 			-->
 			
-			<!-- Bradley Hall v1 -->
+			<!-- Bradley Hall -->
 			<a-entity 
-				position="-2.760 0 1.417"
-				rotation="0 -2 0">
+				position="-80.93767 0 -19.85607" 
+				rotation="0 2 0">
 				
 				<!-- Building Model -->
-				<a-entity
+				<a-entity 
 					gltf-model="#BradleyHallExtTextured"
-					position="-81.2 -0.090 -19.471"
-					rotation="0 2 0"
-					shadow
-				></a-entity>
+					position="" 
+					rotation="" 
+					shadow="">
+				</a-entity>
 				
 				<!-- Front Door -->
-				<a-entity
+				<a-entity 
 					gltf-model="#BHallDoor"
-					scale="0.02 0.02 0.022"
-					rotation="0 0.2 0"
-					position="-44.870 1.541 -19.975"
-					link="href: BradleyHall2F.html"
-				></a-entity>
+					scale="0.02 0.02 0.022" 
+					rotation="" 
+					position="36.34016 1.62937 1.09909" 
+					link="href: BradleyHall2F.html">
+				</a-entity>
 				
 				<!-- Link to BHall 2F
 				<a-link 
@@ -169,8 +169,6 @@
 					position="-42 1 -42"
 					rotation="0 90 0"
 				-->
-				></a-link>
-				
 			</a-entity>
 			
 			<!--Library Textured v1 -->
@@ -191,12 +189,12 @@
 			></a-entity>
 
 			<!--Student Center -->
-			<a-entity
-				gltf-model="#StudentCenter"
-				position="90.13978 3.622 -119.43946"
-				rotation="0 1.58 0"
-				shadow
-			></a-entity>
+			<a-entity 
+				gltf-model="ASSETS/MODELS/StudentCenter.gltf" 
+				position="89.56439 3.54031 -118.31138" 
+				rotation="0 2 0" 
+				shadow="">
+			</a-entity>
 
 			<!-- Swords Hall v1 -->
 			<a-entity
@@ -217,11 +215,12 @@
 			
 			<!-- Westlake Hall v1 -->
 			<a-entity 
-				gltf-model="#WestlakeExt"  
-				position="-69.90242 3.70367 62.35618" 
+				gltf-model="ASSETS/MODELS/WestlakeV0.6.gltf" 
+				position="-67.64781 3.72 61.48494" 
 				rotation="" 
-				scale="0.92 1 1.04" 
-				shadow="">
+				scale="" 
+				shadow="" 
+				visible="">
 			</a-entity>
 			
 			<!-- Olin Hall v1 -->
@@ -248,7 +247,7 @@
 			<a-entity 
 				gltf-model="#Roads" 
 				position="-2.826 0.1 2.316" 
-				scale="1.08 1 0.96" 
+				scale="1.0 1 1" 
 				rotation="0 90 0" 
 				shadow="cast: false">
 			</a-entity>
@@ -258,7 +257,7 @@
 				gltf-model="#Sidewalks" 
 				position="-2.826 0.05 2.316" 
 				shadow="cast: false" 
-				scale="1.08 100 0.96" 
+				scale="1.0 100 1" 
 				rotation="0 90 0" 
 				src="#Sidewalks" 
 				repeat="100 100">
@@ -1164,7 +1163,7 @@
 				></a-entity>
 			</a-entity>
 			
-			<!-- Campus Map  
+			<!-- Campus Map  -->
 			<a-plane
 				src="#Map"
 				opacity="0.5"
@@ -1173,7 +1172,7 @@
 				height="407.5" 
 				width="346" 
 			></a-plane>
-			-->
+			
 		</a-scene>
 	</body>
 </html>
