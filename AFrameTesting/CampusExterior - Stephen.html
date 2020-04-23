@@ -61,13 +61,13 @@
 				<a-asset-item id="Buildings" src="ASSETS/MODELS/FullCampus.gltf"></a-asset-item>
 				<a-asset-item id="BradleyHallExt" src="ASSETS/MODELS/BradleyHallExt.gltf"></a-asset-item>
 				<a-asset-item id="BradleyHallExtTextured" src="ASSETS/MODELS/BradleyHallExtTexturedV5.gltf"></a-asset-item>
-				<a-asset-item id="HartmanCenter" src="ASSETS/MODELS/HartmanTexturedV1.gltf"></a-asset-item>
+				<a-asset-item id="HartmanCenter" src="ASSETS/MODELS/HartmanTexturedV2.gltf"></a-asset-item>
 				<a-asset-item id="StudentCenter" src="ASSETS/MODELS/StudentCenter.gltf"></a-asset-item>
 				<a-asset-item id="SwordsHallExt" src="ASSETS/MODELS/SwordsHallExt.gltf"></a-asset-item>
-				<a-asset-item id="WestlakeExt" src="ASSETS/MODELS/WestlakeV0.6.gltf"></a-asset-item>
+				<a-asset-item id="WestlakeExt" src="ASSETS/MODELS/WestlakeTexturedV6.gltf"></a-asset-item>
 				<a-asset-item id="OlinExt" src="ASSETS/MODELS/OlinHallExt.gltf"></a-asset-item>
 				<a-asset-item id="BusEngComplex" src="ASSETS/MODELS/BusinessEngineeringComplex.gltf"></a-asset-item>
-				<a-asset-item id="Library" src="ASSETS/MODELS/LibraryTexturedV2.gltf"></a-asset-item>
+				<a-asset-item id="Library" src="ASSETS/MODELS/LibraryTexturedV3.gltf"></a-asset-item>
 				
 				<a-asset-item id="Roads" src="ASSETS/MODELS/CampusRoads_v3.gltf"></a-asset-item>
 				<a-asset-item id="Sidewalks" src="ASSETS/MODELS/SidewalksV7.gltf"></a-asset-item>
@@ -173,7 +173,7 @@
 			
 			<!--Library Textured v1 -->
 			<a-entity 
-				gltf-model="ASSETS/MODELS/LibraryTexturedV2.gltf" 
+				gltf-model="#Library" 
 				position="-31.36003 0.117 121.43547" 
 				rotation="0 2 0" 
 				scale="" 
@@ -215,7 +215,7 @@
 			
 			<!-- Westlake Hall v1 -->
 			<a-entity 
-				gltf-model="ASSETS/MODELS/WestlakeV0.6.gltf" 
+				gltf-model="#WestlakeExt" 
 				position="-67.64781 3.72 61.48494" 
 				rotation="" 
 				scale="" 
@@ -737,11 +737,164 @@
 			<!-- In front of Olin, near W. St. James St., closer to Olin -->
 			<a-entity
 				gltf-model="#Tree2"
-				position="65.792 -0.380 -31.910"
+				position="68.48535 -0.38 -26.47453"
 				rotation="0 -90 0"
 				scale="13.560 7.5 13.500"
 				shadow
 			></a-entity>
+			
+			<!-- Olin right in the middle of the trees -->
+			<a-entity 
+				gltf-model="ASSETS/MODELS/Tree2.gltf" 
+				position="70.24827 -0.188 67.99614" 
+				rotation="0 110 0" 
+				scale="8 7.49 8" 
+				shadow="">
+			</a-entity>
+			
+			<!-- Next to sidewalk perpendicular to Olin's far side -->
+			<a-entity 
+				gltf-model="ASSETS/MODELS/Tree2.gltf" 
+				position="38.67233 -0.19866 59.71987" 
+				rotation="0 110 0" 
+				scale="8 7.49 8" 
+				shadow="">
+			</a-entity>
+			
+			<!-- Next to diagonal sidewalk from olin to circle -->
+			<a-entity 
+				gltf-model="ASSETS/MODELS/Tree2.gltf" 
+				position="20.9816 -0.188 54.50112" 
+				rotation="0 110 0" 
+				scale="4 3 4" 
+				shadow="">
+			</a-entity>
+			
+			<!-- Left of circle, furthest left -->
+			<a-entity 
+				gltf-model="ASSETS/MODELS/Tree2.gltf" 
+				position="17.50474 -0.188 65.44311" 
+				rotation="0 110 0" 
+				scale="8 7.49 8" 
+				shadow="">
+			</a-entity>
+			
+			<!-- Left of circle, closest to circle -->
+			<a-entity 
+				gltf-model="ASSETS/MODELS/Tree2.gltf" 
+				position="13.7295 -0.188 54.18367" 
+				rotation="0 110 0" 
+				scale="8 7.49 8" 
+				shadow="">
+			</a-entity>
+			
+			<!-- Left of circle, higher up -->
+			<a-entity 
+				gltf-model="ASSETS/MODELS/Tree2.gltf" 
+				position="2.37229 -0.188 65.5686" 
+				rotation="0 110 0" 
+				scale="8 7.49 8" 
+				shadow="">
+			</a-entity>
+			
+			<!-- Left of circle, in front of further benches -->
+			<a-entity 
+				gltf-model="ASSETS/MODELS/Tree2.gltf" 
+				position="10.5119 -0.188 80.63209" 
+				rotation="0 110 0" 
+				scale="8 7.49 8" 
+				shadow="">
+			</a-entity>
+			
+			<!-- Left of Circle, closest to Olin -->
+			<a-entity 
+				gltf-model="ASSETS/MODELS/Tree2.gltf" 
+				position="31.79236 -0.188 89.59206" 
+				rotation="0 110 0" 
+				scale="8 7.49 8" 
+				shadow="">
+			</a-entity>
+			
+			<!-- Big between Olin & Library -->
+			<a-entity 
+				gltf-model="ASSETS/MODELS/Tree2.gltf" 
+				position="9.6791 -0.188 106.50797" 
+				rotation="0 110 0" 
+				scale="8 7.49 8" 
+				shadow="">
+			</a-entity>
+			
+			<!-- Olin/Swords/Library, closer to Olin -->
+			<a-entity 
+				gltf-model="ASSETS/MODELS/Tree2.gltf" 
+				position="31.23312 -0.188 115.36264" 
+				rotation="0 110 0" 
+				scale="4 3 4" 
+				shadow="">
+			</a-entity>
+			
+			<!-- Olin/Swords/Library, closer to Swords -->
+			<a-entity 
+				gltf-model="ASSETS/MODELS/Tree2.gltf" 
+				position="22.91298 -0.188 124.81212" 
+				rotation="0 110 0" 
+				scale="4 3 4" 
+				shadow="">
+			</a-entity>
+			
+			<!-- Olin/Swords/Library, closer to Library -->
+			<a-entity 
+				gltf-model="ASSETS/MODELS/Tree2.gltf" 
+				position="9.46013 -0.188 114.47185" 
+				rotation="0 110 0" 
+				scale="4 3 4" 
+				shadow="">
+			</a-entity>
+			
+			<!-- In front of library, to the left -->
+			<a-entity 
+				gltf-model="ASSETS/MODELS/Tree2.gltf" 
+				position="-26.79782 -0.188 93.97813" 
+				rotation="" 
+				scale="4 3 4" 
+				shadow="">
+			</a-entity>
+			
+			<!-- In font of library, left -->
+			<a-entity 
+				gltf-model="ASSETS/MODELS/Tree2.gltf" 
+				position="-25.44865 -0.188 75.11246" 
+				rotation="0 -90 0" 
+				scale="4 3 4" 
+				shadow="">
+			</a-entity>
+			
+			<!-- In font of library, center -->
+			<a-entity 
+				gltf-model="ASSETS/MODELS/Tree2.gltf" 
+				position="-28.15003 -0.188 75.03582" 
+				rotation="0 -90 0" 
+				scale="4 3 4" 
+				shadow="">
+			</a-entity>
+			
+			<!-- In font of library, right -->
+			<a-entity 
+				gltf-model="ASSETS/MODELS/Tree2.gltf" 
+				position="-30.87671 -0.188 75.07107" 
+				rotation="0 -90 0" 
+				scale="4 3 4" 
+				shadow="">
+			</a-entity>
+			
+			<!-- In front of library, to the right -->
+			<a-entity 
+				gltf-model="ASSETS/MODELS/Tree2.gltf" 
+				position="-45.10827 -0.188 60.04997" 
+				rotation="0 -90 0" 
+				scale="8 7.49 8" 
+				shadow="">
+			</a-entity>
 
 			<!-- Bradley Hall Front Right Tree1 -->			
 			<a-entity
