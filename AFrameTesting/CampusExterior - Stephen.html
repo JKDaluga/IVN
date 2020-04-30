@@ -65,8 +65,8 @@
 				<a-asset-item id="StudentCenter" src="ASSETS/MODELS/StudentCenter.gltf"></a-asset-item>
 				<a-asset-item id="SwordsHallExt" src="ASSETS/MODELS/SwordsHallExt.gltf"></a-asset-item>
 				<a-asset-item id="WestlakeExt" src="ASSETS/MODELS/WestlakeTexturedV6.gltf"></a-asset-item>
-				<a-asset-item id="OlinExt" src="ASSETS/MODELS/OlinHallExt.gltf"></a-asset-item>
-				<a-asset-item id="BusEngComplex" src="ASSETS/MODELS/BusinessEngineeringComplex.gltf"></a-asset-item>
+				<a-asset-item id="OlinExt" src="ASSETS/MODELS/OlinTextured.gltf"></a-asset-item>
+				<a-asset-item id="BusEngComplex" src="ASSETS/MODELS/BusinessEngineeringComplexTextured.gltf"></a-asset-item>
 				<a-asset-item id="Library" src="ASSETS/MODELS/LibraryTexturedV3.gltf"></a-asset-item>
 				
 				<a-asset-item id="Roads" src="ASSETS/MODELS/CampusRoads_v3.gltf"></a-asset-item>
@@ -93,12 +93,12 @@
 
 			<!-- Scene Lighting - "General"-->
 			<a-entity
-				light="type: ambient; intensity: 0.5; color: #f2feff; ground-color: #475070;">
+				light="type: ambient; intensity: 0.640; color: #f2feff; ground-color: #475070;">
 			</a-entity>
 			
 			<!-- Scene Lighting - "Sun"-->
 			<a-entity 
-				light="type:point; castShadow:true; color:#eeffff; intensity:1; shadowBias:-0.01" 
+				light="type:point; castShadow:true; color:#eeffff; intensity:0.81; shadowBias:-0.01" 
 				position="122.846 166.815 -126.305">
 			</a-entity>
 
@@ -190,7 +190,7 @@
 
 			<!--Student Center -->
 			<a-entity 
-				gltf-model="ASSETS/MODELS/StudentCenter.gltf" 
+				gltf-model="#StudentCenter" 
 				position="89.56439 3.54031 -118.31138" 
 				rotation="0 2 0" 
 				shadow="">
@@ -245,7 +245,7 @@
 			
 			<!-- Campus Roads -->			
 			<a-entity 
-				gltf-model="ASSETS/MODELS/CampusRoads_v3.gltf" 
+				gltf-model="#Roads" 
 				position="-2.68115 0.1 2.54" 
 				scale="1.07 1 0.97" 
 				rotation="0 90 0" 
@@ -254,7 +254,7 @@
 			
 			<!-- Campus Sidewalks -->			
 			<a-entity 
-				gltf-model="ASSETS/MODELS/SidewalksV7.gltf" 
+				gltf-model="#Sidewalks" 
 				position="-2.24118 0.05 1.43678" 
 				shadow="cast: false" 
 				scale="1.07 100 0.96" 
@@ -644,13 +644,22 @@
 			></a-entity>
 			
 			<!-- Small in front of Westlake, right -->
-			<a-entity
-				gltf-model="#Tree2"
-				position="-59.837 -0.042 61.986"
-				rotation="0 149.000 0"
-				scale="2.000 2.000 2.000"
-				shadow
-			></a-entity>
+			<a-entity 
+				gltf-model="#Tree2" 
+				position="-44.55151 -0.042 67.31925" 
+				rotation="0 149 0" 
+				scale="2 2 2" 
+				shadow="">
+			</a-entity>
+			
+			<!-- Small in front of Westlake, left -->
+			<a-entity 
+				gltf-model="#Tree2" 
+				position="-44.83432 -0.042 80.55361"
+				rotation="0 149 0" 
+				scale="2 2 2" 
+				shadow="">
+			</a-entity>
 			
 			<!-- Relative to Olin -->
 			
@@ -746,7 +755,7 @@
 			<!-- Olin right in the middle of the trees -->
 			<a-entity 
 				gltf-model="ASSETS/MODELS/Tree2.gltf" 
-				position="70.24827 -0.188 67.99614" 
+				position="67.13609 -4.01589 66.5448" 
 				rotation="0 110 0" 
 				scale="8 7.49 8" 
 				shadow="">
@@ -754,61 +763,61 @@
 			
 			<!-- Next to sidewalk perpendicular to Olin's far side -->
 			<a-entity 
-				gltf-model="ASSETS/MODELS/Tree2.gltf" 
-				position="38.67233 -0.19866 59.71987" 
-				rotation="0 110 0" 
-				scale="8 7.49 8" 
+				gltf-model="#Tree2" 
+				position="14.23801 -0.19866 85.08399" 
+				rotation="0 74.14 0" 
+				scale="13 7.49 14" 
 				shadow="">
 			</a-entity>
 			
 			<!-- Next to diagonal sidewalk from olin to circle -->
 			<a-entity 
-				gltf-model="ASSETS/MODELS/Tree2.gltf" 
+				gltf-model="#Tree2" 
 				position="20.9816 -0.188 54.50112" 
 				rotation="0 110 0" 
 				scale="4 3 4" 
 				shadow="">
 			</a-entity>
 			
-			<!-- Left of circle, furthest left -->
+			<!-- Left of circle, further left -->
 			<a-entity 
 				gltf-model="ASSETS/MODELS/Tree2.gltf" 
-				position="17.50474 -0.188 65.44311" 
-				rotation="0 110 0" 
+				position="-3.6857 -2.24344 64.26784" 
+				rotation="0 71.55 0" 
 				scale="8 7.49 8" 
 				shadow="">
 			</a-entity>
 			
 			<!-- Left of circle, closest to circle -->
 			<a-entity 
-				gltf-model="ASSETS/MODELS/Tree2.gltf" 
-				position="13.7295 -0.188 54.18367" 
+				gltf-model="#Tree2" 
+				position="16.00987 -4.81709 59.94121" 
 				rotation="0 110 0" 
-				scale="8 7.49 8" 
+				scale="10 9 10" 
 				shadow="">
 			</a-entity>
 			
 			<!-- Left of circle, higher up -->
 			<a-entity 
 				gltf-model="ASSETS/MODELS/Tree2.gltf" 
-				position="2.37229 -0.188 65.5686" 
-				rotation="0 110 0" 
-				scale="8 7.49 8" 
+				position="4.13437 -0.188 -12.43589" 
+				rotation="0 -102.26 0" 
+				scale="12 7.49 12" 
 				shadow="">
 			</a-entity>
 			
 			<!-- Left of circle, in front of further benches -->
 			<a-entity 
 				gltf-model="ASSETS/MODELS/Tree2.gltf" 
-				position="10.5119 -0.188 80.63209" 
+				position="14.48225 -0.08462 95.49923" 
 				rotation="0 110 0" 
-				scale="8 7.49 8" 
+				scale="12 6.7 12" 
 				shadow="">
 			</a-entity>
 			
 			<!-- Left of Circle, closest to Olin -->
 			<a-entity 
-				gltf-model="ASSETS/MODELS/Tree2.gltf" 
+				gltf-model="#Tree2" 
 				position="31.79236 -0.188 89.59206" 
 				rotation="0 110 0" 
 				scale="8 7.49 8" 
@@ -817,16 +826,16 @@
 			
 			<!-- Big between Olin & Library -->
 			<a-entity 
-				gltf-model="ASSETS/MODELS/Tree2.gltf" 
-				position="9.6791 -0.188 106.50797" 
-				rotation="0 110 0" 
-				scale="8 7.49 8" 
+				gltf-model="#Tree1" 
+				position="-18.45436 -1.43256 68.83344" 
+				rotation="0 -27.36 0" 
+				scale="8 8 9" 
 				shadow="">
 			</a-entity>
 			
 			<!-- Olin/Swords/Library, closer to Olin -->
 			<a-entity 
-				gltf-model="ASSETS/MODELS/Tree2.gltf" 
+				gltf-model="#Tree2" 
 				position="31.23312 -0.188 115.36264" 
 				rotation="0 110 0" 
 				scale="4 3 4" 
@@ -835,25 +844,25 @@
 			
 			<!-- Olin/Swords/Library, closer to Swords -->
 			<a-entity 
-				gltf-model="ASSETS/MODELS/Tree2.gltf" 
-				position="22.91298 -0.188 124.81212" 
-				rotation="0 110 0" 
-				scale="4 3 4" 
+				gltf-model="#Tree2" 
+				position="-0.87751 -0.188 122.63484" 
+				rotation="0 50 0" 
+				scale="6 3 6" 
 				shadow="">
 			</a-entity>
 			
 			<!-- Olin/Swords/Library, closer to Library -->
 			<a-entity 
-				gltf-model="ASSETS/MODELS/Tree2.gltf" 
-				position="9.46013 -0.188 114.47185" 
-				rotation="0 110 0" 
-				scale="4 3 4" 
+				gltf-model="#Tree4" 
+				position="1.65534 -0.45582 92.99497" 
+				rotation="0 113.68 0" 
+				scale="5 5 5" 
 				shadow="">
 			</a-entity>
 			
 			<!-- In front of library, to the left -->
 			<a-entity 
-				gltf-model="ASSETS/MODELS/Tree2.gltf" 
+				gltf-model="#Tree2" 
 				position="-26.79782 -0.188 93.97813" 
 				rotation="" 
 				scale="4 3 4" 
@@ -862,59 +871,83 @@
 			
 			<!-- In font of library, left -->
 			<a-entity 
-				gltf-model="ASSETS/MODELS/Tree2.gltf" 
-				position="-25.44865 -0.188 75.11246" 
-				rotation="0 -90 0" 
-				scale="4 3 4" 
+				gltf-model="#Tree4" 
+				position="-24.18566 -1.27796 91.1789" 
+				rotation="" 
+				scale="5 4 5" 
 				shadow="">
 			</a-entity>
 			
 			<!-- In font of library, center -->
 			<a-entity 
-				gltf-model="ASSETS/MODELS/Tree2.gltf" 
-				position="-28.15003 -0.188 75.03582" 
-				rotation="0 -90 0" 
-				scale="4 3 4" 
+				gltf-model="#Tree4" 
+				position="-24.18566 -1.27796 91.1789" 
+				rotation="" 
+				scale="5 4 5" 
 				shadow="">
 			</a-entity>
 			
 			<!-- In font of library, right -->
 			<a-entity 
-				gltf-model="ASSETS/MODELS/Tree2.gltf" 
-				position="-30.87671 -0.188 75.07107" 
-				rotation="0 -90 0" 
-				scale="4 3 4" 
+				gltf-model="#Tree4" 
+				position="-24.18566 -1.27796 91.1789" 
+				rotation="" 
+				scale="5 4 5" 
 				shadow="">
 			</a-entity>
+
 			
 			<!-- In front of library, to the right -->
 			<a-entity 
-				gltf-model="ASSETS/MODELS/Tree2.gltf" 
+				gltf-model="#Tree2" 
 				position="-45.10827 -0.188 60.04997" 
 				rotation="0 -90 0" 
 				scale="8 7.49 8" 
 				shadow="">
 			</a-entity>
-
-			<!-- Bradley Hall Front Right Tree1 -->			
-			<a-entity
-				gltf-model="#Tree1"
-				position="-26.620 -0.351 -58.860"
-				rotation="0 275 0"
-				scale="10 9 10"
-				shadow
-			></a-entity>
-
-			<!-- Long one in front of Olin quad Tree2 -->
-
-
-			<!-- In front of Westlake Tree4 -->
-			<a-entity
-				gltf-model="#Tree4"
-				position="-1.793 -0.380 73.950"
-				scale="15 15 15"
-				shadow
-			></a-entity>
+			<a-entity 
+				gltf-model="#Tree1" 
+				position="-39.66389 -0.723 110.86257" 
+				rotation="0 110 0" 
+				scale="8 8 9" 
+				shadow="">
+			</a-entity>
+			
+			<!-- In front of Bradley, left of hedges -->
+			<a-entity 
+				gltf-model="#Tree4" 
+				position="-33.04597 -6.40351 5.63304" 
+				rotation="-25.79 -90 -16.64" 
+				scale="12 10 12" 
+				shadow="">
+			</a-entity>
+			
+			<!-- In front of Bradley, right of hedges -->
+			<a-entity 
+				gltf-model="ASSETS/MODELS/Tree2.gltf" 
+				position="-37.36737 -0.80945 -17.38869" 
+				rotation="0 46 0" 
+				scale="5.97 5 6" 
+				shadow="">
+			</a-entity>
+			
+			<!-- Immediately in front of Bradley, right side -->
+			<a-entity 
+				gltf-model="ASSETS/MODELS/Tree4.gltf" 
+				position="-53.39208 -1.76626 -39.31536" 
+				rotation="0 149 20" 
+				scale="8 10 8" 
+				shadow="">
+			</a-entity>
+			
+			<!-- Immediately in front of Bradley, left side -->
+			<a-entity 
+				gltf-model="ASSETS/MODELS/Tree4.gltf" 
+				position="-35.63955 -8.41005 -10.38683" 
+				rotation="3.97 12.85 -20.5" 
+				scale="8 10 8" 
+				shadow="">
+			</a-entity>
 			
 			<!-- BECC Flora -->
 			<!-- BECC Entrance Bushes -->
@@ -924,6 +957,90 @@
 				scale="3 3 3"
 				shadow
 			></a-entity>	
+			
+			<!-- Big tree in front, rightish -->
+			<a-entity 
+				gltf-model="#Tree2" 
+				position="-7.72493 -0.38 -66.40017" 
+				scale="12 8 13" 
+				rotation="0 30 0" 
+				shadow="">
+			</a-entity>
+			
+			<!-- Tree Midway between BEC and Circle -->
+			<a-entity 
+				gltf-model="#Tree1" 
+				position="24.69648 -1.18656 -75.73852" 
+				rotation="0 275 0" 
+				scale="3.63 3.85 3.2" 
+				shadow="">
+			</a-entity>
+			
+			<!-- Bush in front of BEC, leftish -->
+			<a-entity 
+				gltf-model="#Bush1" 
+				position="-21.3567 -0.065 -87.76921" 
+				scale="3 3 3" 
+				shadow="" 
+				rotation="0 180 0">
+			</a-entity>
+			
+			<!-- Between BEC and MSC -->
+			
+			<!-- -->
+			<!-- B/w Sission & BEC, closer to BEC -->
+			<a-entity 
+				gltf-model="#Tree1" 
+				position="57.69862 -1.18656 -172.5915" 
+				rotation="0 275 0" 
+				scale="6.23 7.38 6.6" 
+				shadow="">
+			</a-entity>
+			
+			<!-- B/w Sission & BEC, closer to Burgess -->
+			<a-entity 
+				gltf-model="#Tree2" 
+				position="54.22464 -2.41124 -208.09297" 
+				scale="12 8 13" 
+				rotation="0 -70 0" 
+				shadow="">
+			</a-entity>
+			
+			<!-- B/w Sisson & BEC, closer to the middle -->
+			<a-entity 
+				gltf-model="#Tree4" 
+				position="87.89254 -6.732 -131.86015" 
+				rotation="0 -40.33 0" 
+				scale="15 17 15" 
+				shadow="">
+			</a-entity>
+			
+			<!-- B/w Sisson & BEC, closest to Sisson -->
+			<a-entity 
+				gltf-model="#Tree2" 
+				position="32.89601 -2.12513 -181.72747" 
+				scale="14 6.72 15" 
+				rotation="0 -25 0" 
+				shadow="">
+			</a-entity>
+			
+			<!-- B/w Sisson & BEC, close to MSC -->
+			<a-entity 
+				gltf-model="#Tree3" 
+				position="89.78574 -6.732 -126.59968" 
+				rotation="0 30 0" 
+				scale="15 17 15" 
+				shadow="">
+			</a-entity>
+			
+			<!-- B/w Sisson & BEC, kind of in front of BEC, near MSC -->
+			<a-entity 
+				gltf-model="#Tree4" 
+				position="50.10201 -4.562 -107.22875" 
+				rotation="0 149 0" 
+				scale="10.52 13.47 11" 
+				shadow="">
+			</a-entity>
 			
 			<!-- Founder's Circle Flora -->
 		
@@ -1316,7 +1433,7 @@
 				></a-entity>
 			</a-entity>
 			
-			<!-- Campus Map  
+			<!-- Campus Map  -->
 			<a-plane
 				src="#Map"
 				opacity="0.5"
@@ -1325,7 +1442,7 @@
 				height="407.5" 
 				width="346" 
 			></a-plane>
-			-->
+			
 		</a-scene>
 	</body>
 </html>
