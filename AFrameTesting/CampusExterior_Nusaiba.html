@@ -60,25 +60,30 @@
 			<a-assets>
 				<a-asset-item id="Buildings" src="ASSETS/MODELS/FullCampus.gltf"></a-asset-item>
 				<a-asset-item id="BradleyHallExt" src="ASSETS/MODELS/BradleyHallExt.gltf"></a-asset-item>
-				<a-asset-item id="BradleyHallExtTextured" src="ASSETS/MODELS/BradleyHallExtTextured_v4.gltf"></a-asset-item>
-				<a-asset-item id="HartmanCenter" src="ASSETS/MODELS/HartmanCenter.gltf"></a-asset-item>
+				<a-asset-item id="BradleyHallExtTextured" src="ASSETS/MODELS/BradleyHallExtTexturedV5.gltf"></a-asset-item>
+				<a-asset-item id="HartmanCenter" src="ASSETS/MODELS/HartmanTexturedV2.gltf"></a-asset-item>
+				<a-asset-item id="StudentCenter" src="ASSETS/MODELS/StudentCenter.gltf"></a-asset-item>
 				<a-asset-item id="SwordsHallExt" src="ASSETS/MODELS/SwordsHallExt.gltf"></a-asset-item>
-				<a-asset-item id="WestlakeExt" src="ASSETS/MODELS/WestlakeHallExt.gltf"></a-asset-item>
+				<a-asset-item id="WestlakeExt" src="ASSETS/MODELS/WestlakeTexturedV6.gltf"></a-asset-item>
 				<a-asset-item id="OlinExt" src="ASSETS/MODELS/OlinHallExt.gltf"></a-asset-item>
 				<a-asset-item id="BusEngComplex" src="ASSETS/MODELS/BusinessEngineeringComplex.gltf"></a-asset-item>
-				<a-asset-item id="Library" src="ASSETS/MODELS/LibraryTextured.gltf"></a-asset-item>
-
+				<a-asset-item id="Library" src="ASSETS/MODELS/LibraryTexturedV3.gltf"></a-asset-item>
+				
 				<a-asset-item id="Roads" src="ASSETS/MODELS/CampusRoads_v3.gltf"></a-asset-item>
-				<a-asset-item id="Sidewalks" src="ASSETS/MODELS/Sidewalks_v5.gltf"></a-asset-item>
+				<a-asset-item id="Sidewalks" src="ASSETS/MODELS/SidewalksV7.gltf"></a-asset-item>
 				<a-asset-item id="FoundersCircle" src="ASSETS/MODELS/FoundersCircle.gltf"></a-asset-item>
+				<a-asset-item id="CircleCurb" src="ASSETS/MODELS/CurbV5.gltf"></a-asset-item>
+				<a-asset-item id="BradleyGrounds" src="ASSETS/MODELS/BradleyGrounds.gltf"></a-asset-item>
+				
 				<a-asset-item id="Bench" src="ASSETS/MODELS/Bench/scene.gltf"></a-asset-item>
 				<a-asset-item id="WhiteBench" src="ASSETS/MODELS/whitebench.gltf"></a-asset-item>
+				<a-asset-item id="Lamp" src="ASSETS/MODELS/lamppost.gltf"></a-asset-item>
 				<a-asset-item id="Tree1" src="ASSETS/MODELS/Tree1.gltf"></a-asset-item>
 				<a-asset-item id="Tree2" src="ASSETS/MODELS/Tree2.gltf"></a-asset-item>
 				<a-asset-item id="Tree3" src="ASSETS/MODELS/Tree3.gltf"></a-asset-item>
 				<a-asset-item id="Tree4" src="ASSETS/MODELS/Tree4.gltf"></a-asset-item>
 				<a-asset-item id="Bush1" src="ASSETS/MODELS/Bush1.gltf"></a-asset-item>
-				<a-asset-item id="nav-mesh" src="ASSETS/MODELS/NavMesh2.gltf"></a-asset-item>
+				<a-asset-item id="nav-mesh" src="ASSETS/MODELS/NavMesh.gltf"></a-asset-item>
 				
 				<a-asset-item id="BHallDoor" src="ASSETS/MODELS/DoorBradleyHall.gltf"></a-asset-item>
 				
@@ -99,18 +104,20 @@
 
 			<!-- Player/User Object-->
 			<a-entity id="rig" movement-controls="constrainToNavMesh: true;">
-				<a-entity camera look-controls="pointerLockEnabled: true;" position="0 1.6 0"></a-entity>
-				<a-entity 
-					cursor="fuse: true; fuseTimeout: 500"
-					position="0 0 -1"
-					geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03"
-					material="color: black; shader: flat">
+				<a-entity camera look-controls="pointerLockEnabled: true;" position="0 1.6 0">
+					<a-entity 
+						cursor="fuse: true; fuseTimeout: 500"
+						position="0 0 -1"
+						geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03"
+						material="color: black; shader: flat">
+					</a-entity>
 				</a-entity>
+
 			</a-entity>
 			
 			<!-- Navmesh -->
 			<a-entity gltf-model="#nav-mesh"
-			  position="0 .1 0"
+			  position="-23.348 .1 -13.181"
 			  rotation="0 0 0"
 			  nav-mesh
 			  visible="false"
@@ -133,33 +140,44 @@
 			></a-entity>
 			-->
 			
-			<!-- Bradley Hall v1 -->
-			<a-entity>
+			<!-- Bradley Hall -->
+			<a-entity 
+				position="-80.93767 0 -19.85607" 
+				rotation="0 2 0">
+				
 				<!-- Building Model -->
-				<a-entity
+				<a-entity 
 					gltf-model="#BradleyHallExtTextured"
-					position="-81.2 -0.090 -18.631"
-					rotation="0 2 0"
-					shadow
-				></a-entity>
+					position="" 
+					rotation="" 
+					shadow="">
+				</a-entity>
 				
 				<!-- Front Door -->
-				<a-entity
+				<a-entity 
 					gltf-model="#BHallDoor"
-					scale="0.02 0.02 0.022"
-					rotation="0 0.2 0"
-					position="-44.340 0.861 -19.808"
-					link="href: BradleyHall2F.html"
-				></a-entity>
+					scale="0.02 0.02 0.022" 
+					rotation="" 
+					position="36.34016 1.62937 1.09909" 
+					link="href: BradleyHall2F.html">
+				</a-entity>
 				
-				<!-- Link to BHall 2F 
+				<!-- Link to BHall 2F
 				<a-link 
 					href="BradleyHall2F.html" 
 					title="Bradley Hall - 2nd Floor" 
 					position="-42 1 -42"
 					rotation="0 90 0"
-				></a-link>
 				-->
+			</a-entity>
+			
+			<!--Library Textured v1 -->
+			<a-entity 
+				gltf-model="#Library" 
+				position="-31.36003 0.117 121.43547" 
+				rotation="0 2 0" 
+				scale="" 
+				shadow="">
 			</a-entity>
 			
 			<!-- Hartman Center v1 -->
@@ -169,6 +187,14 @@
 				rotation="0 2 0"
 				shadow
 			></a-entity>
+
+			<!--Student Center -->
+			<a-entity 
+				gltf-model="ASSETS/MODELS/StudentCenter.gltf" 
+				position="89.56439 3.54031 -118.31138" 
+				rotation="0 2 0" 
+				shadow="">
+			</a-entity>
 
 			<!-- Swords Hall v1 -->
 			<a-entity
@@ -181,29 +207,21 @@
 			<!-- Business Engineering Complex v1 -->
 			<a-entity
 				gltf-model="#BusEngComplex"
-				position="1.966 -1.144 -137.391"
+				position="2.339 -1.144 -140.686"
 				rotation="0 90.110 0"
 				scale="1.070 1 1"
 				shadow
 			></a-entity>
-				
+			
 			<!-- Westlake Hall v1 -->
-			<a-entity
-				gltf-model="#WestlakeExt"
-				position="-68.801 4.095 60.516"
-				rotation="0 2 0"
-				scale="1 1 1"
-				shadow
-			></a-entity>
-
-			<!--Library Textured v1 -->
-			<a-entity
-				gltf-model="#Library"
-				position="-33.887 0.117 127.858"
-				rotation="0 2 0"
-				scale="1 1 1"
-				shadow
-			></a-entity>
+			<a-entity 
+				gltf-model="#WestlakeExt" 
+				position="-67.64781 3.72 61.48494" 
+				rotation="" 
+				scale="" 
+				shadow="" 
+				visible="">
+			</a-entity>
 			
 			<!-- Olin Hall v1 -->
 			<a-entity
@@ -225,124 +243,301 @@
 				shadow="cast:false; receive:true"
 			></a-plane>
 			
-			<!-- Campus Roads -->
-			<a-entity
-				gltf-model="#Roads"
-				position="-2.826 0.4 2.316"
-				scale="1.080 1 0.960"
-				rotation="0 90 0"
-				shadow="cast:false; receive:true"
-			></a-entity>
+			<!-- Campus Roads -->			
+			<a-entity 
+				gltf-model="ASSETS/MODELS/CampusRoads_v3.gltf" 
+				position="-2.68115 0.1 2.54" 
+				scale="1.07 1 0.97" 
+				rotation="0 90 0" 
+				shadow="cast: false">
+			</a-entity>
 			
-			<!-- Campus Sidewalks -->
-			<a-entity
-				gltf-model="#Sidewalks"
-				position="-2.826 0.2 2.316"
-				shadow="cast:false; receive:true"
-				<!-- scale="1.080 1 0.960"
-				rotation="0 90 0"
-				src="#Sidewalks"
-				repeat="100 100" -->
-			></a-entity>
+			<!-- Campus Sidewalks -->			
+			<a-entity 
+				gltf-model="ASSETS/MODELS/SidewalksV7.gltf" 
+				position="-2.24118 0.05 1.43678" 
+				shadow="cast: false" 
+				scale="1.07 100 0.96" 
+				rotation="0 90 0" 
+				src="#Sidewalks" 
+				repeat="100 100">
+			</a-entity>
 			
 			<!-- Founder's Circle -->
-			<a-entity				
-				gltf-model="#FoundersCircle"	
-				position="-3.390 0.511 0.131"
-				rotation="0 90 0"
-				shadow
-			></a-entity>
-			
-			<!-- Bhall White Benches -->
-			<a-entity>
-				<!-- Right top bench-->
-				<a-entity
-					gltf-model="#WhiteBench"
-					position="-27.424 0.102 -25.200"
-					rotation="0 90 0"
-				></a-entity>
-
-				<!-- Right middle bench -->
-				<a-entity
-					gltf-model="#WhiteBench"
-					position="-23.000 0.102 -26.234"
-					rotation="0 0 0"
-				></a-entity>
-
-				<!-- Right bottom bench -->
-				<a-entity
-					gltf-model="#WhiteBench"
-					position="-19.000 0.102 -25.200"
-					rotation="0 90 0"
-				></a-entity>
-
-				<!-- Left top bench-->
-				<a-entity
-					gltf-model="#WhiteBench"
-					position="-27.424 0.102 -15.200"
-					rotation="0 90 0"
-				></a-entity>
-
-				<!-- Left middle bench -->
-				<a-entity
-					gltf-model="#WhiteBench"
-					position="-23.000 0.102 -13.860"
-					rotation="0 0 0"
-				></a-entity>
-
-				<!-- Left bottom bench -->
-				<a-entity
-					gltf-model="#WhiteBench"
-					position="-19.000 0.102 -15.200"
-					rotation="0 90 0"
-				></a-entity>
+			<a-entity 
+				gltf-model="#FoundersCircle" 
+				position="-3.39 0.16962 0.131" 
+				rotation="0 90 0" 
+				shadow="cast: false" 
+				scale="1 0.28 1">
+				<a-entity 
+					gltf-model="#CircleCurb" 
+					gltf-model="#CircleCurb" 
+					position="1.245 -0.03 1.011" 
+					scale="0.95 0.00001 0.91" 
+					shadow="cast: false">
+				</a-entity>
 			</a-entity>
-		
-			<!-- STREET LAMPS -->
+			
+			<!-- Combined ground planes
+			<a-entity
+				gltf-model="#BradleyGrounds"
+				shadow="cast:false; receive:true">
+			</a-entity>
+			-->
+			
+			<!-- Bhall Front Decor -->
+			<a-entity
+				shadow>
+			
+				<!-- White Benches -->
+				<a-entity
+					position="0 -0.150 0"
+					scale="0.8 0.8 0.8"
+					shadow>
+					<!-- Right top bench-->
+					<a-entity
+						gltf-model="#WhiteBench"
+						position="-34.648 0.102 -31.581"
+						rotation="0 90 0"
+						shadow
+					></a-entity>
 
+					<!-- Right middle bench -->
+					<a-entity
+						gltf-model="#WhiteBench"
+						position="-28.922 0.102 -28.832"
+						rotation="0 0 0"
+						shadow
+					></a-entity>
 
+					<!-- Right bottom bench -->
+					<a-entity
+						gltf-model="#WhiteBench"
+						position="-23.462 0.102 -31.430"
+						rotation="0 90 0"
+						shadow
+					></a-entity>
+
+					<!-- Left top bench-->
+					<a-entity
+						gltf-model="#WhiteBench"
+						position="-34.657 0.102 -18.182"
+						rotation="0 90 0"
+						shadow
+					></a-entity>
+
+					<!-- Left middle bench -->
+					<a-entity
+						gltf-model="#WhiteBench"
+						position="-28.780 0.102 -21.199"
+						rotation="0 0 0"
+						shadow
+					></a-entity>
+
+					<!-- Left bottom bench -->
+					<a-entity
+						gltf-model="#WhiteBench"
+						position="-23.616 0.102 -18.183"
+						rotation="0 90 0"
+						shadow
+					></a-entity>
+				</a-entity>
+				
+				<!-- Hedges -->
+				<a-entity
+					position="-15.002 0 -12.474"
+					shadow>
+					<!-- left hedges -->
+					<a-entity>
+						<a-entity
+							gltf-model="#Bush1"
+							position="35.960 -0.060 -0.900"
+							scale="6.510 1.260 1.000"
+							shadow
+							>
+						</a-entity>
+						<a-entity
+							gltf-model="#Bush1"
+							position="-3.699 -0.060 -18.154"
+							scale="2.460 1.260 1.000"
+							rotation="0 90 0"
+							shadow
+							>
+						</a-entity>
+						<a-entity
+							gltf-model="#Bush1"
+							position="-16.089 -0.060 -18.154"
+							scale="2.460 1.260 1.000"
+							rotation="0 90 0"
+							shadow
+							>
+						</a-entity>
+						<a-entity
+							gltf-model="#Bush1"
+							position="10.965 -0.060 -4.634"
+							scale="1.710 0.960 1.000"
+							shadow>
+						</a-entity>
+						<a-entity
+							gltf-model="#Bush1"
+							position="-32.092 -0.060 -1.387"
+							scale="2.220 0.960 1.000"
+							rotation="0 180 0"
+							shadow>
+						</a-entity>
+					</a-entity>
+
+					<!-- right hedges -->
+					<a-entity
+						position="0 0 -15.040"
+						scale="1 1 -1"
+						shadow>
+						<a-entity
+							gltf-model="#Bush1"
+							position="35.960 -0.060 -0.900"
+							scale="6.510 1.260 1.000"
+							shadow
+							>
+						</a-entity>
+						<a-entity
+							gltf-model="#Bush1"
+							position="-3.699 -0.060 -18.154"
+							scale="2.460 1.260 1.000"
+							rotation="0 90 0"
+							shadow
+							>
+						</a-entity>
+						<a-entity
+							gltf-model="#Bush1"
+							position="-16.089 -0.060 -18.154"
+							scale="2.460 1.260 1.000"
+							rotation="0 90 0"
+							shadow
+							>
+						</a-entity>
+						<a-entity
+							gltf-model="#Bush1"
+							position="10.965 -0.060 -4.634"
+							scale="1.710 0.960 1.000"
+							shadow>
+						</a-entity>
+						<a-entity
+							gltf-model="#Bush1"
+							position="-32.092 -0.060 -1.387"
+							scale="2.220 0.960 1.000"
+							rotation="0 180 0"
+							shadow>
+						</a-entity>
+					</a-entity>
+				</a-entity>
+				
+				<!-- Lower Right Tree -->
+				<a-entity
+					gltf-model="#Tree1"
+					position="-19.257 -0.263 -27.431"
+					scale="1.800 1.800 1.800"
+					rotation="0 275.000 0"
+					shadow>
+				</a-entity>
+				
+				<!-- Top Right Tree -->
+				<a-entity
+					gltf-model="#Tree1"
+					position="-26.234 -0.660 -18.124"
+					scale="2.000 2.200 2.000"
+					rotation="0 109.1 0"
+					shadow>
+				</a-entity>
+				
+				<!-- Lower Left Tree -->
+				<a-entity
+					gltf-model="#Tree2"
+					position="-29.222 -0.028 -22.434"
+					scale="3.000 1.500 3.000"
+					rotation="0 -25.1 0"
+					shadow>
+				</a-entity>
+				
+				<!-- Top Left Tree -->
+				<a-entity
+					gltf-model="#Tree3"
+					position="-28.230 -0.058 -17.398"
+					scale="3 2 3"
+					rotation="0 135 0"
+					shadow>
+				</a-entity>
+			</a-entity>
+			
 			<!-- BENCHES -->
-			<a-entity>
-				<!-- Bradley Hall front right entrance benches -->
-				<!-- R one facing library -->
-				<a-entity
-					gltf-model="#Bench"
-					position="-22.728 0.550 -45.064"
-					rotation="0 3.210 0"
-					scale="0.750 0.750 0.750"
-					shadow
-				></a-entity>
-				<!-- L one facing BECC -->
-				<a-entity
-					gltf-model="#Bench"
-					position="-22.548 0.550 -41.638"
-					rotation="0 185.220 0"
-					scale="0.750 0.750 0.750"
-					shadow
-				></a-entity>
 
-				<!-- Bradley Hall front left entrance benches -->
-				<!-- R one facing library -->
+			<!-- Mini garden and benches in front of Olin -->
+			<a-entity
 				<a-entity
 					gltf-model="#Bench"
-					position="-22.728 0.550 1.979"
-					rotation="0 -8.180 0"
+					position="16.472 0.555 43.228"
+					rotation="0 115.000 0"
 					scale="0.750 0.750 0.750"
 					shadow
 				></a-entity>
-				<!-- L one facing BECC -->
 				<a-entity
 					gltf-model="#Bench"
-					position="-23.310 0.550 5.671"
-					rotation="0 173.180 0"
+					position="18.822 0.555 44.048"
+					rotation="0 200.000 0"
 					scale="0.750 0.750 0.750"
 					shadow
+				></a-entity>
+			></a-entity>			
+
+			<a-entity>
+			
+				<!-- Bradley Hall front right entrance benches -->
+				
+				<a-entity
+					position="0 0 -0.330"
+					<!-- R one facing library -->
+					<a-entity
+						gltf-model="#Bench"
+						position="-22.728 0.550 -45.064"
+						rotation="0 3.210 0"
+						scale="0.750 0.750 0.750"
+						shadow
+					></a-entity>
+					<!-- L one facing BECC -->
+					<a-entity
+						gltf-model="#Bench"
+						position="-22.548 0.550 -41.638"
+						rotation="0 185.220 0"
+						scale="0.750 0.750 0.750"
+						shadow
+					></a-entity>
+				></a-entity>
+				
+				<!-- Bradley Hall front left entrance benches -->
+				<a-entity
+					position="0 0 -0.360"
+					<!-- R one facing library -->
+					<a-entity
+						gltf-model="#Bench"
+						position="-22.728 0.550 1.979"
+						rotation="0 -10.570 0"
+						scale="0.750 0.750 0.750"
+						shadow
+					></a-entity>
+					<!-- L one facing BECC -->
+					<a-entity
+						gltf-model="#Bench"
+						position="-23.397 0.550 5.590"
+						rotation="0 169.360 0"
+						scale="0.750 0.750 0.750"
+						shadow
+					></a-entity>
 				></a-entity>
 
 				<!-- Library exterior benches -->
 				<a-entity
 					gltf-model="#Bench"
-					position="-36.923 0.700 93.484"
+					position="-36.221 0.700 91.819"
 					rotation="0 122.110 0"
 					scale="0.750 0.750 0.750"
 					shadow
@@ -350,8 +545,8 @@
 
 				<a-entity
 					gltf-model="#Bench"
-					position="-50.884 0.700 94.370"
-					rotation="0 -122.110 0"
+					position="-51.210 0.700 93.993"
+					rotation="0 -124.590 0"
 					scale="0.750 0.750 0.750"
 					shadow
 				></a-entity>
@@ -366,36 +561,21 @@
 					shadow
 				></a-entity>
 
-				<!-- Olin quad benches -->
+				<!-- Olin quad benches -->			
 
 				<a-entity
 					gltf-model="#Bench"
-					position="13.978 0.555 40.783"
-					rotation="0 115.000 0"
-					scale="0.750 0.750 0.750"
-					shadow
-				></a-entity>
-				<a-entity
-					gltf-model="#Bench"
-					position="16.064 0.555 42.286"
-					rotation="0 200.000 0"
-					scale="0.750 0.750 0.750"
-					shadow
-				></a-entity>
-
-				<a-entity
-					gltf-model="#Bench"
-					position="86.625 0.549 22.010"
+					position="86.910 0.549 21.492"
 					rotation="0 38.790 0"
 					scale="0.750 0.750 0.750"
 					shadow
 				></a-entity>
-
+				
 				<!-- Founder's circle Benches  -->			
 				<a-entity
-					position="3.380 0.100 -4.840"
+					position="3.380 -0.320 -4.840"
 					scale="0.750 0.750 0.750"
-				>
+					>
 					<!-- Founder's Circle top right facing Library -->
 					<a-entity
 						gltf-model="#Bench"
@@ -407,7 +587,7 @@
 					<!-- Founder's Circle top left facing BECC -->
 					<a-entity
 						gltf-model="#Bench"
-						position="5.626 1.350 -16.887"
+						position="5.356 1.350 -16.906"
 						rotation="0 127 0"
 						shadow
 					></a-entity>		
@@ -428,18 +608,301 @@
 						shadow
 					></a-entity>
 				</a-entity>
-
+				
 				<!-- Student Center entrance bench -->
 				<a-entity
 					gltf-model="#Bench"
-					position="106.031 0.750 -104.460"
-					rotation="0 107.000 0"
-					scale="0.750 0.750 0.750"
+					position="139.96855 1.22824 -117.27778"
+					rotation="0 89 0"
 					shadow
 				></a-entity>
+
 			</a-entity>	
-			
+					
 			<!-- TREES -->
+			
+			<!-- Relative to Bradley -->
+			
+			<!-- Smaller tree, front & far left -->
+			<a-entity
+				gltf-model="#Tree1"
+				position="-4.226 -2.082 -0.411"
+				rotation="0 275.000 0"
+				scale="5 6 5"
+				shadow
+			></a-entity>
+			
+			<!-- Larger tree, front & far left -->
+			<a-entity
+				gltf-model="#Tree2"
+				position="-2.051 -0.188 63.379"
+				rotation="0 110.000 0"
+				scale="12.000 7.490 11.990"
+				shadow
+			></a-entity>
+			
+			<!-- Relative to Westlake -->
+			
+			<!-- Between Westlake and Bradley Hall -->
+			<a-entity
+				gltf-model="#Tree2"
+				position="-102.884 -0.042 25.819"
+				scale="12.000 7.490 11.990"
+				shadow
+			></a-entity>
+			
+			<!-- Small in front of Westlake, right -->
+			<a-entity
+				gltf-model="#Tree2"
+				position="-59.837 -0.042 61.986"
+				rotation="0 149.000 0"
+				scale="2.000 2.000 2.000"
+				shadow
+			></a-entity>
+			
+			<!-- Relative to Olin -->
+			
+			<!-- In front of Olin #1 -->
+			<a-entity
+				gltf-model="#Tree4"
+				position="55.676 -6.732 45.286"
+				rotation="0 149.000 0"
+				scale="15.000 17.000 15.000"
+				shadow
+			></a-entity>
+			
+			<!-- In front of Olin #2 -->
+			<a-entity
+				gltf-model="#Tree2"
+				position="27.505 -0.380 47.853"
+				rotation="0 0 0"
+				scale="15 9 15"
+				shadow
+			></a-entity>
+			
+			<!-- In front of Olin #3 -->
+			<a-entity
+				gltf-model="#Tree4"
+				position="100.354 -7.262 34.225"
+				rotation="0 90.000 0"
+				scale="18 20 15"
+				shadow
+			></a-entity>
+			
+			<!-- In front of Olin #4 -->
+			<a-entity
+				gltf-model="#Tree4"
+				position="95.126 -4.181 11.008"
+				rotation="20.000 90.000 -0.400"
+				scale="20 20 17"
+				shadow
+			></a-entity>
+			
+			<!-- In front of Olin #5 -->
+			<a-entity
+				gltf-model="#Tree2"
+				position="65.764 -0.380 46.213"
+				rotation="-6.640 0 -2.830"
+				scale="9 9 9"
+				shadow
+			></a-entity>
+			
+			<!-- In front of Olin #6 -->
+			<a-entity
+				gltf-model="#Tree2"
+				position="107.253 -0.380 44.138"
+				rotation="8.000 180.000 -2.830"
+				scale="9 9 9"
+				shadow
+			></a-entity>
+			
+			<!-- In front of Olin, next to W. St. James St, small -->
+			<a-entity
+				gltf-model="#Tree2"
+				position="64.804 -0.113 2.998"
+				rotation="0 -25.110 0"
+				scale="5.860 3.100 5.860"
+				shadow
+			></a-entity>
+			
+			<!-- In front of Olin, next to W. St. James St, large left -->
+			<a-entity
+				gltf-model="#Tree1"
+				position="74.593 -1.522 23.449"
+				rotation="0 135.000 0"
+				scale="6.890 7.000 6.580"
+				shadow
+			></a-entity>
+			
+			<!-- In front of Olin, next to W. St. James St, large right -->
+			<a-entity
+				gltf-model="#Tree2"
+				position="-9.498 -0.380 10.509"
+				scale="13.560 6.470 13.500"
+				shadow
+			></a-entity>
+			
+			<!-- In front of Olin, near W. St. James St., closer to Olin -->
+			<a-entity
+				gltf-model="#Tree2"
+				position="68.48535 -0.38 -26.47453"
+				rotation="0 -90 0"
+				scale="13.560 7.5 13.500"
+				shadow
+			></a-entity>
+			
+			<!-- Olin right in the middle of the trees -->
+			<a-entity 
+				gltf-model="ASSETS/MODELS/Tree2.gltf" 
+				position="70.24827 -0.188 67.99614" 
+				rotation="0 110 0" 
+				scale="8 7.49 8" 
+				shadow="">
+			</a-entity>
+			
+			<!-- Next to sidewalk perpendicular to Olin's far side -->
+			<a-entity 
+				gltf-model="ASSETS/MODELS/Tree2.gltf" 
+				position="38.67233 -0.19866 59.71987" 
+				rotation="0 110 0" 
+				scale="8 7.49 8" 
+				shadow="">
+			</a-entity>
+			
+			<!-- Next to diagonal sidewalk from olin to circle -->
+			<a-entity 
+				gltf-model="ASSETS/MODELS/Tree2.gltf" 
+				position="20.9816 -0.188 54.50112" 
+				rotation="0 110 0" 
+				scale="4 3 4" 
+				shadow="">
+			</a-entity>
+			
+			<!-- Left of circle, furthest left -->
+			<a-entity 
+				gltf-model="ASSETS/MODELS/Tree2.gltf" 
+				position="17.50474 -0.188 65.44311" 
+				rotation="0 110 0" 
+				scale="8 7.49 8" 
+				shadow="">
+			</a-entity>
+			
+			<!-- Left of circle, closest to circle -->
+			<a-entity 
+				gltf-model="ASSETS/MODELS/Tree2.gltf" 
+				position="13.7295 -0.188 54.18367" 
+				rotation="0 110 0" 
+				scale="8 7.49 8" 
+				shadow="">
+			</a-entity>
+			
+			<!-- Left of circle, higher up -->
+			<a-entity 
+				gltf-model="ASSETS/MODELS/Tree2.gltf" 
+				position="2.37229 -0.188 65.5686" 
+				rotation="0 110 0" 
+				scale="8 7.49 8" 
+				shadow="">
+			</a-entity>
+			
+			<!-- Left of circle, in front of further benches -->
+			<a-entity 
+				gltf-model="ASSETS/MODELS/Tree2.gltf" 
+				position="10.5119 -0.188 80.63209" 
+				rotation="0 110 0" 
+				scale="8 7.49 8" 
+				shadow="">
+			</a-entity>
+			
+			<!-- Left of Circle, closest to Olin -->
+			<a-entity 
+				gltf-model="ASSETS/MODELS/Tree2.gltf" 
+				position="31.79236 -0.188 89.59206" 
+				rotation="0 110 0" 
+				scale="8 7.49 8" 
+				shadow="">
+			</a-entity>
+			
+			<!-- Big between Olin & Library -->
+			<a-entity 
+				gltf-model="ASSETS/MODELS/Tree2.gltf" 
+				position="9.6791 -0.188 106.50797" 
+				rotation="0 110 0" 
+				scale="8 7.49 8" 
+				shadow="">
+			</a-entity>
+			
+			<!-- Olin/Swords/Library, closer to Olin -->
+			<a-entity 
+				gltf-model="ASSETS/MODELS/Tree2.gltf" 
+				position="31.23312 -0.188 115.36264" 
+				rotation="0 110 0" 
+				scale="4 3 4" 
+				shadow="">
+			</a-entity>
+			
+			<!-- Olin/Swords/Library, closer to Swords -->
+			<a-entity 
+				gltf-model="ASSETS/MODELS/Tree2.gltf" 
+				position="22.91298 -0.188 124.81212" 
+				rotation="0 110 0" 
+				scale="4 3 4" 
+				shadow="">
+			</a-entity>
+			
+			<!-- Olin/Swords/Library, closer to Library -->
+			<a-entity 
+				gltf-model="ASSETS/MODELS/Tree2.gltf" 
+				position="9.46013 -0.188 114.47185" 
+				rotation="0 110 0" 
+				scale="4 3 4" 
+				shadow="">
+			</a-entity>
+			
+			<!-- In front of library, to the left -->
+			<a-entity 
+				gltf-model="ASSETS/MODELS/Tree2.gltf" 
+				position="-26.79782 -0.188 93.97813" 
+				rotation="" 
+				scale="4 3 4" 
+				shadow="">
+			</a-entity>
+			
+			<!-- In font of library, left -->
+			<a-entity 
+				gltf-model="ASSETS/MODELS/Tree2.gltf" 
+				position="-25.44865 -0.188 75.11246" 
+				rotation="0 -90 0" 
+				scale="4 3 4" 
+				shadow="">
+			</a-entity>
+			
+			<!-- In font of library, center -->
+			<a-entity 
+				gltf-model="ASSETS/MODELS/Tree2.gltf" 
+				position="-28.15003 -0.188 75.03582" 
+				rotation="0 -90 0" 
+				scale="4 3 4" 
+				shadow="">
+			</a-entity>
+			
+			<!-- In font of library, right -->
+			<a-entity 
+				gltf-model="ASSETS/MODELS/Tree2.gltf" 
+				position="-30.87671 -0.188 75.07107" 
+				rotation="0 -90 0" 
+				scale="4 3 4" 
+				shadow="">
+			</a-entity>
+			
+			<!-- In front of library, to the right -->
+			<a-entity 
+				gltf-model="ASSETS/MODELS/Tree2.gltf" 
+				position="-45.10827 -0.188 60.04997" 
+				rotation="0 -90 0" 
+				scale="8 7.49 8" 
+				shadow="">
+			</a-entity>
 
 			<!-- Bradley Hall Front Right Tree1 -->			
 			<a-entity
@@ -451,21 +914,7 @@
 			></a-entity>
 
 			<!-- Long one in front of Olin quad Tree2 -->
-			<a-entity
-				gltf-model="#Tree2"
-				position="9.940 -0.380 11.008"
-				scale="9 9 9"
-				shadow
-			></a-entity>
 
-			<!-- Bradley Hall Front Left Tree3 -->
-			<a-entity
-				gltf-model="#Tree3"
-				position="-14.238 -0.380 17.890"
-				rotation="0 -6.390 0"
-				scale="15 10 15"
-				shadow
-			></a-entity>
 
 			<!-- In front of Westlake Tree4 -->
 			<a-entity
@@ -475,41 +924,42 @@
 				shadow
 			></a-entity>
 			
-			<!-- BUSHES -->
-
 			<!-- BECC Flora -->
-		
 			<!-- BECC Entrance Bushes -->
 			<a-entity
 				gltf-model="#Bush1"
 				position="33.008 -0.065 -116.363"
 				scale="3 3 3"
 				shadow
-			></a-entity>			
-
+			></a-entity>	
+			
 			<!-- Founder's Circle Flora -->
 		
 			<!-- Founder's Circle Bushes -->
-			<a-entity>
+			<a-entity
+				position="0 -0.414 0"
+				scale="0.750 0.750 0.750">
 				<!-- Lower Half Bushes -->
-				<a-entity>
+				<a-entity
+					position="4.351 0 -6.485">
 					<!-- Lower Right Quadrant Bushes -->
-					<a-entity>
+					<a-entity
+						position="0.020 0 -1.050">
 						<a-entity
 							gltf-model="#Bush1"
-							position="19.036 0.756 -22.065"
+							position="19.615 0.756 -21.671"
 							scale="0.500 0.500 0.500"
 							shadow
 						></a-entity>
 						<a-entity
 							gltf-model="#Bush1"
-							position="17.966 0.756 -22.065"
+							position="18.196 0.756 -21.805"
 							scale="0.500 0.500 0.500"
 							shadow
 						></a-entity>
 						<a-entity
 							gltf-model="#Bush1"
-							position="16.826 0.756 -22.065"
+							position="16.826 0.756 -21.813"
 							scale="0.500 0.500 0.500"
 							shadow
 						></a-entity>
@@ -521,67 +971,55 @@
 						></a-entity>
 						<a-entity
 							gltf-model="#Bush1"
-							position="15.530 0.756 -23.753"
+							position="15.237 0.756 -24.045"
 							scale="0.500 0.500 0.500"
 							shadow
 						></a-entity>
 						<a-entity
 							gltf-model="#Bush1"
-							position="14.797 0.756 -24.499"
+							position="14.476 0.756 -25.253"
 							scale="0.500 0.500 0.500"
 							shadow
 						></a-entity>
 						<a-entity
 							gltf-model="#Bush1"
-							position="14.838 0.756 -25.486"
+							position="14.452 0.756 -26.555"
 							scale="0.500 0.500 0.500"
 							shadow
 						></a-entity>
 						<a-entity
 							gltf-model="#Bush1"
-							position="14.760 0.756 -26.512"
+							position="14.466 0.756 -27.803"
 							scale="0.500 0.500 0.500"
 							shadow
 						></a-entity>
 						<a-entity
 							gltf-model="#Bush1"
-							position="14.760 0.756 -27.572"
+							position="14.464 0.756 -29.084"
 							scale="0.500 0.500 0.500"
 							shadow
 						></a-entity>
 						<a-entity
 							gltf-model="#Bush1"
-							position="14.760 0.756 -28.599"
+							position="14.470 0.756 -32.885"
 							scale="0.500 0.500 0.500"
 							shadow
 						></a-entity>
 						<a-entity
 							gltf-model="#Bush1"
-							position="14.760 0.756 -27.572"
+							position="14.431 0.756 -34.193"
 							scale="0.500 0.500 0.500"
 							shadow
 						></a-entity>
 						<a-entity
 							gltf-model="#Bush1"
-							position="14.760 0.756 -28.599"
+							position="14.448 0.756 -30.333"
 							scale="0.500 0.500 0.500"
 							shadow
 						></a-entity>
 						<a-entity
 							gltf-model="#Bush1"
-							position="14.760 0.756 -29.661"
-							scale="0.500 0.500 0.500"
-							shadow
-						></a-entity>
-						<a-entity
-							gltf-model="#Bush1"
-							position="14.760 0.756 -30.715"
-							scale="0.500 0.500 0.500"
-							shadow
-						></a-entity>
-						<a-entity
-							gltf-model="#Bush1"
-							position="14.760 0.756 -31.775"
+							position="14.444 0.756 -31.613"
 							scale="0.500 0.500 0.500"
 							shadow
 						></a-entity>
@@ -590,22 +1028,22 @@
 					<!-- Lower Left Quadrant Bushes -->
 					<a-entity
 						scale="1 1 -1"
-						position="0.209 0 -39.622">			
+						position="0.009 0 -38.672">			
 						<a-entity
 							gltf-model="#Bush1"
-							position="19.036 0.756 -22.065"
+							position="19.615 0.756 -21.671"
 							scale="0.500 0.500 0.500"
 							shadow
 						></a-entity>
 						<a-entity
 							gltf-model="#Bush1"
-							position="17.966 0.756 -22.065"
+							position="18.196 0.756 -21.805"
 							scale="0.500 0.500 0.500"
 							shadow
 						></a-entity>
 						<a-entity
 							gltf-model="#Bush1"
-							position="16.826 0.756 -22.065"
+							position="16.826 0.756 -21.813"
 							scale="0.500 0.500 0.500"
 							shadow
 						></a-entity>
@@ -617,67 +1055,55 @@
 						></a-entity>
 						<a-entity
 							gltf-model="#Bush1"
-							position="15.530 0.756 -23.753"
+							position="15.237 0.756 -24.045"
 							scale="0.500 0.500 0.500"
 							shadow
 						></a-entity>
 						<a-entity
 							gltf-model="#Bush1"
-							position="14.797 0.756 -24.499"
+							position="14.476 0.756 -25.253"
 							scale="0.500 0.500 0.500"
 							shadow
 						></a-entity>
 						<a-entity
 							gltf-model="#Bush1"
-							position="14.838 0.756 -25.486"
+							position="14.452 0.756 -26.555"
 							scale="0.500 0.500 0.500"
 							shadow
 						></a-entity>
 						<a-entity
 							gltf-model="#Bush1"
-							position="14.760 0.756 -26.512"
+							position="14.466 0.756 -27.803"
 							scale="0.500 0.500 0.500"
 							shadow
 						></a-entity>
 						<a-entity
 							gltf-model="#Bush1"
-							position="14.760 0.756 -27.572"
+							position="14.464 0.756 -29.084"
 							scale="0.500 0.500 0.500"
 							shadow
 						></a-entity>
 						<a-entity
 							gltf-model="#Bush1"
-							position="14.760 0.756 -28.599"
+							position="14.470 0.756 -32.885"
 							scale="0.500 0.500 0.500"
 							shadow
 						></a-entity>
 						<a-entity
 							gltf-model="#Bush1"
-							position="14.760 0.756 -27.572"
+							position="14.431 0.756 -34.193"
 							scale="0.500 0.500 0.500"
 							shadow
 						></a-entity>
 						<a-entity
 							gltf-model="#Bush1"
-							position="14.760 0.756 -28.599"
+							position="14.448 0.756 -30.333"
 							scale="0.500 0.500 0.500"
 							shadow
 						></a-entity>
 						<a-entity
 							gltf-model="#Bush1"
-							position="14.760 0.756 -29.661"
-							scale="0.500 0.500 0.500"
-							shadow
-						></a-entity>
-						<a-entity
-							gltf-model="#Bush1"
-							position="14.760 0.756 -30.715"
-							scale="0.500 0.500 0.500"
-							shadow
-						></a-entity>
-						<a-entity
-							gltf-model="#Bush1"
-							position="14.760 0.756 -31.775"
+							position="14.444 0.756 -31.613"
 							scale="0.500 0.500 0.500"
 							shadow
 						></a-entity>
@@ -686,26 +1112,26 @@
 			
 				<!-- Upper Half Bushes -->
 				<a-entity
-					scale="-1 1 1"
-					position="18.780 0 0">
-			
+					position="20.550 0 -6.493"
+					scale="-1 1 1">
 					<!-- Upper Right Quadrant Bushes -->
-					<a-entity>
+					<a-entity
+						position="0.020 0 -1.050">
 						<a-entity
 							gltf-model="#Bush1"
-							position="19.036 0.756 -22.065"
+							position="19.615 0.756 -21.671"
 							scale="0.500 0.500 0.500"
 							shadow
 						></a-entity>
 						<a-entity
 							gltf-model="#Bush1"
-							position="17.966 0.756 -22.065"
+							position="18.196 0.756 -21.805"
 							scale="0.500 0.500 0.500"
 							shadow
 						></a-entity>
 						<a-entity
 							gltf-model="#Bush1"
-							position="16.826 0.756 -22.065"
+							position="16.826 0.756 -21.813"
 							scale="0.500 0.500 0.500"
 							shadow
 						></a-entity>
@@ -717,67 +1143,55 @@
 						></a-entity>
 						<a-entity
 							gltf-model="#Bush1"
-							position="15.530 0.756 -23.753"
+							position="15.237 0.756 -24.045"
 							scale="0.500 0.500 0.500"
 							shadow
 						></a-entity>
 						<a-entity
 							gltf-model="#Bush1"
-							position="14.797 0.756 -24.499"
+							position="14.476 0.756 -25.253"
 							scale="0.500 0.500 0.500"
 							shadow
 						></a-entity>
 						<a-entity
 							gltf-model="#Bush1"
-							position="14.838 0.756 -25.486"
+							position="14.452 0.756 -26.555"
 							scale="0.500 0.500 0.500"
 							shadow
 						></a-entity>
 						<a-entity
 							gltf-model="#Bush1"
-							position="14.760 0.756 -26.512"
+							position="14.466 0.756 -27.803"
 							scale="0.500 0.500 0.500"
 							shadow
 						></a-entity>
 						<a-entity
 							gltf-model="#Bush1"
-							position="14.760 0.756 -27.572"
+							position="14.464 0.756 -29.084"
 							scale="0.500 0.500 0.500"
 							shadow
 						></a-entity>
 						<a-entity
 							gltf-model="#Bush1"
-							position="14.760 0.756 -28.599"
+							position="14.470 0.756 -32.885"
 							scale="0.500 0.500 0.500"
 							shadow
 						></a-entity>
 						<a-entity
 							gltf-model="#Bush1"
-							position="14.760 0.756 -27.572"
+							position="14.431 0.756 -34.193"
 							scale="0.500 0.500 0.500"
 							shadow
 						></a-entity>
 						<a-entity
 							gltf-model="#Bush1"
-							position="14.760 0.756 -28.599"
+							position="14.448 0.756 -30.333"
 							scale="0.500 0.500 0.500"
 							shadow
 						></a-entity>
 						<a-entity
 							gltf-model="#Bush1"
-							position="14.760 0.756 -29.661"
-							scale="0.500 0.500 0.500"
-							shadow
-						></a-entity>
-						<a-entity
-							gltf-model="#Bush1"
-							position="14.760 0.756 -30.715"
-							scale="0.500 0.500 0.500"
-							shadow
-						></a-entity>
-						<a-entity
-							gltf-model="#Bush1"
-							position="14.760 0.756 -31.775"
+							position="14.444 0.756 -31.613"
 							scale="0.500 0.500 0.500"
 							shadow
 						></a-entity>
@@ -786,22 +1200,22 @@
 					<!-- Upper Left Quadrant Bushes -->
 					<a-entity
 						scale="1 1 -1"
-						position="0.209 0 -39.622">			
+						position="0.009 0 -38.672">			
 						<a-entity
 							gltf-model="#Bush1"
-							position="19.036 0.756 -22.065"
+							position="19.615 0.756 -21.671"
 							scale="0.500 0.500 0.500"
 							shadow
 						></a-entity>
 						<a-entity
 							gltf-model="#Bush1"
-							position="17.966 0.756 -22.065"
+							position="18.196 0.756 -21.805"
 							scale="0.500 0.500 0.500"
 							shadow
 						></a-entity>
 						<a-entity
 							gltf-model="#Bush1"
-							position="16.826 0.756 -22.065"
+							position="16.826 0.756 -21.813"
 							scale="0.500 0.500 0.500"
 							shadow
 						></a-entity>
@@ -813,67 +1227,55 @@
 						></a-entity>
 						<a-entity
 							gltf-model="#Bush1"
-							position="15.530 0.756 -23.753"
+							position="15.237 0.756 -24.045"
 							scale="0.500 0.500 0.500"
 							shadow
 						></a-entity>
 						<a-entity
 							gltf-model="#Bush1"
-							position="14.797 0.756 -24.499"
+							position="14.476 0.756 -25.253"
 							scale="0.500 0.500 0.500"
 							shadow
 						></a-entity>
 						<a-entity
 							gltf-model="#Bush1"
-							position="14.838 0.756 -25.486"
+							position="14.452 0.756 -26.555"
 							scale="0.500 0.500 0.500"
 							shadow
 						></a-entity>
 						<a-entity
 							gltf-model="#Bush1"
-							position="14.760 0.756 -26.512"
+							position="14.466 0.756 -27.803"
 							scale="0.500 0.500 0.500"
 							shadow
 						></a-entity>
 						<a-entity
 							gltf-model="#Bush1"
-							position="14.760 0.756 -27.572"
+							position="14.464 0.756 -29.084"
 							scale="0.500 0.500 0.500"
 							shadow
 						></a-entity>
 						<a-entity
 							gltf-model="#Bush1"
-							position="14.760 0.756 -28.599"
+							position="14.470 0.756 -32.885"
 							scale="0.500 0.500 0.500"
 							shadow
 						></a-entity>
 						<a-entity
 							gltf-model="#Bush1"
-							position="14.760 0.756 -27.572"
+							position="14.431 0.756 -34.193"
 							scale="0.500 0.500 0.500"
 							shadow
 						></a-entity>
 						<a-entity
 							gltf-model="#Bush1"
-							position="14.760 0.756 -28.599"
+							position="14.448 0.756 -30.333"
 							scale="0.500 0.500 0.500"
 							shadow
 						></a-entity>
 						<a-entity
 							gltf-model="#Bush1"
-							position="14.760 0.756 -29.661"
-							scale="0.500 0.500 0.500"
-							shadow
-						></a-entity>
-						<a-entity
-							gltf-model="#Bush1"
-							position="14.760 0.756 -30.715"
-							scale="0.500 0.500 0.500"
-							shadow
-						></a-entity>
-						<a-entity
-							gltf-model="#Bush1"
-							position="14.760 0.756 -31.775"
+							position="14.444 0.756 -31.613"
 							scale="0.500 0.500 0.500"
 							shadow
 						></a-entity>
@@ -882,50 +1284,139 @@
 			</a-entity>
 			
 			<!-- Founder's Circle Trees -->
-			<a-entity>
+			<a-entity
+				position="-2.830 0 7.040">
 			
 				<!-- Lower Right Quadrant Tree -->
 				<a-entity
 					gltf-model="#Tree2"
-					position="-25.268 -0.380 -26.044"
-					scale="10.000 5.970 10.000"
-					shadow
-				></a-entity>
-			
-				<!-- Lower Right Quadrant Tree -->
-				<a-entity
-					gltf-model="#Tree2"
-					position="-25.268 -0.380 -26.044"
-					scale="10.000 5.970 10.000"
+					position="48.365 -0.380 -9.789"
+					scale="9.370 5.600 10.350"
+					rotation="0 140 0"
 					shadow
 				></a-entity>
 				
 				<!-- Upper Right Quadrant Tree -->
 				<a-entity
 					gltf-model="#Tree2"
-					position="-36.058 -0.380 -26.044"
-					scale="10.000 5.970 10.000"
+					position="5.307 -0.380 -64.824"
+					scale="7.910 4.930 7.880"
+					rotation="0 273.820 0"
 					shadow
 				></a-entity>
 				
 				<!-- Upper Left Quadrant Tree -->
 				<a-entity
 					gltf-model="#Tree2"
-					position="-27.859 -0.193 -12.162"
-					scale="8.000 5.000 8.000"
+					position="-15.481 -0.113 -28.685"
+					scale="5.860 3.100 5.860"
+					rotation="0 -25.110 0"
 					shadow
 				></a-entity>
 				
 				<!-- Lower Left Quadrant Tree -->
 				<a-entity
 					gltf-model="#Tree2"
-					position="-9.557 -0.193 -13.938"
-					scale="6.000 4.000 6.000"
+					position="0.356 -0.193 -15.490"
+					scale="4.500 2.5 4.550"
+					rotation="0 15 0"
 					shadow
 				></a-entity>
 			</a-entity>
 			
-			<!-- Campus Map 
+			<!-- STREET LAMPS -->
+
+			<!-- Founder's Circle -->
+			<a-entity
+				gltf-model="#Lamp"
+				position="12.98689 0 -23.1888"
+				scale="2 2 2"
+				rotation=""
+				shadow								
+			></a-entity>
+			<a-entity
+				gltf-model="#Lamp"
+				position="12.987 0 -16.52035"
+				rotation=""
+				scale="2 2 2"
+			></a-entity>
+			<a-entity
+			 	gltf-model="#Lamp"
+				position="5.733 0 -16.351"
+				rotation=""
+				scale="2 2 2"
+			></a-entity>
+			<a-entity
+				gltf-model="#Lamp" 
+				position="5.51715 0 -23.021"
+				rotation=""
+				scale="2 2 2"
+			></a-entity>
+
+			<!-- Bradley Hall front -->
+			<!-- Front staircase -->
+			<a-entity
+				gltf-model="#Lamp"
+				position="-41.22725 1.00572 -25.11782"
+				scale="2 2 2"
+			></a-entity>
+			<a-entity
+				gltf-model="#Lamp"
+				position="-40.85007 1.00572 -15.27572"
+				scale="2 2 2"
+			></a-entity>
+			
+			<a-entity
+				gltf-model="#Lamp"
+				position="-39.52657 0.01 -32.79826"
+				scale="2 2 2"
+			></a-entity>
+			<a-entity
+				gltf-model="#Lamp"
+				position="-39.52657 0.01 -8.16066"
+				scale="2 2 2"
+			></a-entity>
+
+			<-- Front of white bench area -->
+			<a-entity
+				gltf-model="#Lamp"
+				position="-13.013 0.010 -34.347"
+				scale="2 2 2"
+			></a-entity>
+			<a-entity
+				gltf-model="#Lamp"
+				position="-13.083 0.010 -7.641"
+				scale="2 2 2"
+			></a-entity>
+			
+			<-- Right side bench pair -->
+			<a-entity
+				gltf-model="#Lamp"
+				position="-20.045 0.010 -45.574"
+				scale="2 2 2"
+			></a-entity>
+			
+			<-- Left side bench pair -->
+			<a-entity
+				gltf-model="#Lamp"
+				position="-20.488 0.010 5.750"
+				scale="2 2 2"
+			></a-entity>
+			
+			<!-- Westlake front -->
+			<a-entity 
+				gltf-model="#Lamp"
+				position="-25.8562 0.0226 54.30816"
+				scale="2 2 2"
+			></a-entity>
+			<a-entity
+				gltf-model="#Lamp"
+				position="-33.255 0.023 51.605"
+				scale="2 2 2"
+			></a-entity>
+
+
+			<!-- Campus Map  
 			<a-plane
 				src="#Map"
 				opacity="0.5"
@@ -933,7 +1424,6 @@
 				rotation="-90 0 0" 
 				height="407.5" 
 				width="346" 
-				
 			></a-plane>
 			-->
 		</a-scene>
