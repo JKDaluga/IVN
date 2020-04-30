@@ -65,7 +65,7 @@
 				<a-asset-item id="StudentCenter" src="ASSETS/MODELS/StudentCenter.gltf"></a-asset-item>
 				<a-asset-item id="SwordsHallExt" src="ASSETS/MODELS/SwordsHallExt.gltf"></a-asset-item>
 				<a-asset-item id="WestlakeExt" src="ASSETS/MODELS/WestlakeTexturedV6.gltf"></a-asset-item>
-				<a-asset-item id="OlinExt" src="ASSETS/MODELS/OlinTextured.gltf"></a-asset-item>
+				<a-asset-item id="OlinExt" src="ASSETS/MODELS/OlinTexturedV2.gltf"></a-asset-item>
 				<a-asset-item id="BusEngComplex" src="ASSETS/MODELS/BusinessEngineeringComplexTextured.gltf"></a-asset-item>
 				<a-asset-item id="Library" src="ASSETS/MODELS/LibraryTexturedV3.gltf"></a-asset-item>
 				
@@ -85,7 +85,7 @@
 				<a-asset-item id="Bush1" src="ASSETS/MODELS/Bush1.gltf"></a-asset-item>
 				<a-asset-item id="nav-mesh" src="ASSETS/MODELS/NavMesh.gltf"></a-asset-item>
 				
-				<a-asset-item id="BHallDoor" src="ASSETS/MODELS/DoorBradleyHall.gltf"></a-asset-item>
+				<a-asset-item id="WoodDoor" src="ASSETS/MODELS/DoorBradleyHall.gltf"></a-asset-item>
 				
 				<img id="Grass" src="ASSETS/TEXTURES/Grass.jpg"></img>
 				<img id="Map" src="ASSETS/CampusMap.png"></img>
@@ -142,12 +142,12 @@
 			
 			<!-- Bradley Hall -->
 			<a-entity 
-				position="-80.93767 0 -19.85607" 
-				rotation="0 2 0">
+				position="-80.802 0 -21.08592" 
+				rotation="">
 				
 				<!-- Building Model -->
 				<a-entity 
-					gltf-model="#BradleyHallExtTextured"
+					gltf-model="#BradleyHallTextured" 
 					position="" 
 					rotation="" 
 					shadow="">
@@ -155,7 +155,7 @@
 				
 				<!-- Front Door -->
 				<a-entity 
-					gltf-model="#BHallDoor"
+					gltf-model="#WoodDoor" 
 					scale="0.02 0.02 0.022" 
 					rotation="" 
 					position="36.34016 1.62937 1.09909" 
@@ -872,7 +872,7 @@
 			<!-- In font of library, left -->
 			<a-entity 
 				gltf-model="#Tree4" 
-				position="-24.18566 -1.27796 91.1789" 
+				position="-19.850 -1.27796 91.1789" 
 				rotation="" 
 				scale="5 4 5" 
 				shadow="">
@@ -881,7 +881,7 @@
 			<!-- In font of library, center -->
 			<a-entity 
 				gltf-model="#Tree4" 
-				position="-24.18566 -1.27796 91.1789" 
+				position="-22.086 -1.27796 91.1789" 
 				rotation="" 
 				scale="5 4 5" 
 				shadow="">
@@ -898,13 +898,6 @@
 
 			
 			<!-- In front of library, to the right -->
-			<a-entity 
-				gltf-model="#Tree2" 
-				position="-45.10827 -0.188 60.04997" 
-				rotation="0 -90 0" 
-				scale="8 7.49 8" 
-				shadow="">
-			</a-entity>
 			<a-entity 
 				gltf-model="#Tree1" 
 				position="-39.66389 -0.723 110.86257" 
@@ -1027,9 +1020,9 @@
 			<!-- B/w Sisson & BEC, close to MSC -->
 			<a-entity 
 				gltf-model="#Tree3" 
-				position="89.78574 -6.732 -126.59968" 
+				position="86.81052 -0.88354 -126.18926" 
 				rotation="0 30 0" 
-				scale="15 17 15" 
+				scale="13 10.39 13" 
 				shadow="">
 			</a-entity>
 			
