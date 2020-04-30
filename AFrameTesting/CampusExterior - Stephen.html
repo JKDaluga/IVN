@@ -60,7 +60,7 @@
 			<a-assets>
 				<a-asset-item id="Buildings" src="ASSETS/MODELS/FullCampus.gltf"></a-asset-item>
 				<a-asset-item id="BradleyHallExt" src="ASSETS/MODELS/BradleyHallExt.gltf"></a-asset-item>
-				<a-asset-item id="BradleyHallExtTextured" src="ASSETS/MODELS/BradleyHallExtTexturedV5.gltf"></a-asset-item>
+				<a-asset-item id="BradleyHallExtTextured" src="ASSETS/MODELS/BradleyHallExtTexturedV7.gltf"></a-asset-item>
 				<a-asset-item id="HartmanCenter" src="ASSETS/MODELS/HartmanTexturedV2.gltf"></a-asset-item>
 				<a-asset-item id="StudentCenter" src="ASSETS/MODELS/StudentCenter.gltf"></a-asset-item>
 				<a-asset-item id="SwordsHallExt" src="ASSETS/MODELS/SwordsHallExt.gltf"></a-asset-item>
@@ -87,6 +87,7 @@
 				
 				<a-asset-item id="WoodDoor" src="ASSETS/MODELS/DoorBradleyHall.gltf"></a-asset-item>
 				
+				<img id="GlassDoor"  src="ASSETS/TEXTURES/GlassDoor.png"></img>
 				<img id="Grass" src="ASSETS/TEXTURES/Grass.jpg"></img>
 				<img id="Map" src="ASSETS/CampusMap.png"></img>
 			</a-assets>
@@ -139,6 +140,15 @@
 				position="0 -5 0"
 			></a-entity>
 			-->
+			
+			<!-- Glass Door -->
+				<a-box 
+					src="#GlassDoor" 
+					material="" 
+					geometry="" 
+					scale="2.8 3.56 0.5" 
+					rotation="0 90 0">
+				</a-box>
 			
 			<!-- Bradley Hall -->
 			<a-entity 
@@ -1434,6 +1444,7 @@
 				rotation="-90 0 0" 
 				height="407.5" 
 				width="346" 
+				visible="false";
 			></a-plane>
 			
 		</a-scene>
