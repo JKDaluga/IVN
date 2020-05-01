@@ -7,21 +7,21 @@
 		<a-scene
 			background="color: #4CC3D9">
 			<a-assets>
-				<a-asset-item id="BradleyHall2F" src="ASSETS/MODELS/BradleyHall2F.gltf"></a-asset-item>
+				<a-asset-item id="BradleyHall1F" src="ASSETS/MODELS/Interiors/BradleyHall1F.gltf"></a-asset-item>
 			</a-assets>
 			
 			<a-entity
 				position="0 1.6 2"
 				camera
 				look-controls 
-				wasd-controls
+				wasd-controls="acceleration:10;"
 				<!-- user-height="1.6" -->
 			></a-entity>
 			
-			<!-- All Buildings Prototype -->
 			<a-entity
-				gltf-model="#BradleyHall2F"
-				position="0 1 0"
+				gltf-model="#BradleyHall1F"
+				position="0 1.5 0"
+				scale="1 0.8 1"
 			></a-entity>
 			
 			<a-plane
