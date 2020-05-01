@@ -60,7 +60,7 @@
 			<a-assets>
 				<a-asset-item id="BradleyHallExtTextured" src="ASSETS/MODELS/Buildings/BradleyHallExtTexturedV7.gltf"></a-asset-item>
 				<a-asset-item id="HartmanCenter" src="ASSETS/MODELS/Buildings/HartmanTexturedV2.gltf"></a-asset-item>
-				<a-asset-item id="StudentCenter" src="ASSETS/MODELS/Buildings/StudentCenter.gltf"></a-asset-item>
+				<a-asset-item id="StudentCenter" src="ASSETS/MODELS/Buildings/StudentCenterTexturedV1.gltf"></a-asset-item>
 				<a-asset-item id="SwordsHallExt" src="ASSETS/MODELS/Buildings/SwordsTexturedV1.gltf"></a-asset-item>
 				<a-asset-item id="WestlakeExt" src="ASSETS/MODELS/Buildings/WestlakeTexturedV6.gltf"></a-asset-item>
 				<a-asset-item id="OlinExt" src="ASSETS/MODELS/Buildings/OlinTexturedV2.gltf"></a-asset-item>
@@ -84,7 +84,7 @@
 				
 				<a-asset-item id="WoodDoor" src="ASSETS/MODELS/Misc/DoorBradleyHall.gltf"></a-asset-item>
 				
-				<img id="GlassDoor"  src="ASSETS/TEXTURES/GlassDoor.png"></img>
+				<img id="GlassDoor"  src="ASSETS/TEXTURES/GlassDoor.jpg"></img>
 				<img id="Grass" src="ASSETS/TEXTURES/Grass.jpg"></img>
 				<img id="Map" src="ASSETS/CampusMap.png"></img>
 			</a-assets>
@@ -138,15 +138,6 @@
 			></a-entity>
 			-->
 			
-			<!-- Glass Door -->
-				<a-box 
-					src="#GlassDoor" 
-					material="" 
-					geometry="" 
-					scale="2.8 3.56 0.5" 
-					rotation="0 90 0">
-				</a-box>
-			
 			<!-- Bradley Hall -->
 			<a-entity 
 				position="-80.802 0 -21.08592" 
@@ -169,6 +160,22 @@
 					link="href: Interiors/BradleyHall1F.html">
 				</a-entity>
 				
+				<!-- Front Left Glass Door -->
+				<a-box 
+					src="#GlassDoor" 	
+					scale="2.8 3.56 0.5" 
+					position="34.351 1.712 22.157"
+					rotation="0 90 0">
+				</a-box>
+				
+				<!-- Front Right Glass Door -->
+				<a-box 
+					src="#GlassDoor" 
+					scale="2.8 3.56 0.5" 
+					position="35.876 1.797 -21.821"
+					rotation="0 90 0">
+				</a-box>
+				
 				<!-- Link to BHall 2F
 				<a-link 
 					href="BradleyHall2F.html" 
@@ -190,10 +197,31 @@
 			<!-- Hartman Center -->
 			<a-entity
 				gltf-model="#HartmanCenter"
-				position="72.040 3.8 -44.12"
+				position="72.040 3.8 -44.500"
 				rotation="0 2 0"
-				shadow
-			></a-entity>
+				shadow>
+				<!-- Facing BHall Glass Door -->
+				<a-box 
+					src="#GlassDoor" 
+					scale="2.8 3.56 0.5" 
+					position="72.040 -2.544 -1.863"
+					rotation="0 87.820 0">
+				</a-box>
+				<!-- Facing W St. James, Left Glass Door -->
+				<a-box 
+					src="#GlassDoor" 
+					scale="2.8 2.480 0.5" 
+					position="-16.501 -2.622 4.008"
+					rotation="0 -10.020 0">
+				</a-box>
+				<!-- Facing W St. James, Right Glass Door -->
+				<a-box 
+					src="#GlassDoor" 
+					scale="2.8 2.480 0.5" 
+					position="16.750 -2.577 6.041"
+					rotation="0 1.030 0">
+				</a-box>
+			</a-entity>
 
 			<!--Student Center -->
 			<a-entity 
@@ -201,6 +229,49 @@
 				position="89.56439 3.54031 -118.31138" 
 				rotation="0 2 0" 
 				shadow="">
+				<!-- MSC, Facing BECC, Glass Door -->
+				<a-box 
+					src="#GlassDoor" 
+					repeat="2 1"
+					scale="5.220 2.480 0.5" 
+					position="-18.579 2.480 29.571"
+					rotation="0 90 0">
+				</a-box>
+				<!-- MSC, Facing Street, Left Glass Door -->
+				<a-box 
+					src="#GlassDoor" 
+					scale="2.8 2.480 0.5" 
+					position="12.230 -2.197 18.463"
+					rotation="0 90 0">
+				</a-box>
+				<!-- MSC, Facing Street, Right Glass Door -->
+				<a-box 
+					src="#GlassDoor" 
+					scale="2.8 2.480 0.5" 
+					position="11.275 -2.276 11.645"
+					rotation="0 90 0">
+				</a-box>
+				<!-- Sission/Burgess, Facing On-Campus Street, Glass Door -->
+				<a-box 
+					src="#GlassDoor" 
+					scale="2.8 2.480 0.5" 
+					position=""
+					rotation="0 90 0">
+				</a-box>
+				<!-- Sission/Burgess, Facing BEC, Glass Door -->
+				<a-box 
+					src="#GlassDoor" 
+					scale="2.8 2.480 0.5" 
+					position=""
+					rotation="0 90 0">
+				</a-box>
+				<!-- Sission/Burgess, Facing MSC from BEC side, Glass Door -->
+				<a-box 
+					src="#GlassDoor" 
+					scale="2.8 2.480 0.5" 
+					position=""
+					rotation="0 90 0">
+				</a-box>
 			</a-entity>
 
 			<!-- Swords Hall v1 -->
