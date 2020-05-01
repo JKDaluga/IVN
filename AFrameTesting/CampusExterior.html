@@ -58,31 +58,33 @@
 			background="color: #56d8fe">
 			
 			<a-assets>
+				<!-- Buildings -->
 				<a-asset-item id="BradleyHallExtTextured" src="ASSETS/MODELS/Buildings/BradleyHallExtTexturedV7.gltf"></a-asset-item>
 				<a-asset-item id="HartmanCenter" src="ASSETS/MODELS/Buildings/HartmanTexturedV2.gltf"></a-asset-item>
-				<a-asset-item id="StudentCenter" src="ASSETS/MODELS/Buildings/StudentCenterTexturedV1.gltf"></a-asset-item>
+				<a-asset-item id="StudentCenter" src="ASSETS/MODELS/Buildings/StudentCenterTexturedV3.gltf"></a-asset-item>
 				<a-asset-item id="SwordsHallExt" src="ASSETS/MODELS/Buildings/SwordsTexturedV1.gltf"></a-asset-item>
 				<a-asset-item id="WestlakeExt" src="ASSETS/MODELS/Buildings/WestlakeTexturedV6.gltf"></a-asset-item>
 				<a-asset-item id="OlinExt" src="ASSETS/MODELS/Buildings/OlinTexturedV2.gltf"></a-asset-item>
 				<a-asset-item id="BusEngComplex" src="ASSETS/MODELS/Buildings/BusinessEngineeringComplexTexturedV2.gltf"></a-asset-item>
 				<a-asset-item id="Library" src="ASSETS/MODELS/Buildings/LibraryTexturedV3.gltf"></a-asset-item>
-				
+				<!-- Grounds -->
 				<a-asset-item id="Roads" src="ASSETS/MODELS/Grounds/CampusRoads_v3.gltf"></a-asset-item>
 				<a-asset-item id="Sidewalks" src="ASSETS/MODELS/Grounds/SidewalksV7.gltf"></a-asset-item>
 				<a-asset-item id="FoundersCircle" src="ASSETS/MODELS/Grounds/FoundersCircle.gltf"></a-asset-item>
 				<a-asset-item id="CircleCurb" src="ASSETS/MODELS/Grounds/CurbV5.gltf"></a-asset-item>
-				
+				<!-- Misc -->
 				<a-asset-item id="Bench" src="ASSETS/MODELS/Misc/Bench/scene.gltf"></a-asset-item>
 				<a-asset-item id="WhiteBench" src="ASSETS/MODELS/Misc/whitebench.gltf"></a-asset-item>
 				<a-asset-item id="Lamp" src="ASSETS/MODELS/Misc/lamppost.gltf"></a-asset-item>
+				<a-asset-item id="WoodDoor" src="ASSETS/MODELS/Misc/DoorBradleyHall.gltf"></a-asset-item>
+				<!-- Flora -->
 				<a-asset-item id="Tree1" src="ASSETS/MODELS/Flora/Tree1.gltf"></a-asset-item>
 				<a-asset-item id="Tree2" src="ASSETS/MODELS/Flora/Tree2.gltf"></a-asset-item>
 				<a-asset-item id="Tree3" src="ASSETS/MODELS/Flora/Tree3.gltf"></a-asset-item>
 				<a-asset-item id="Tree4" src="ASSETS/MODELS/Flora/Tree4.gltf"></a-asset-item>
 				<a-asset-item id="Bush1" src="ASSETS/MODELS/Flora/Bush1.gltf"></a-asset-item>
+
 				<a-asset-item id="nav-mesh" src="ASSETS/MODELS/NavMesh.gltf"></a-asset-item>
-				
-				<a-asset-item id="WoodDoor" src="ASSETS/MODELS/Misc/DoorBradleyHall.gltf"></a-asset-item>
 				
 				<img id="GlassDoor"  src="ASSETS/TEXTURES/GlassDoor.jpg"></img>
 				<img id="Grass" src="ASSETS/TEXTURES/Grass.jpg"></img>
@@ -172,8 +174,8 @@
 				<a-box 
 					src="#GlassDoor" 
 					scale="2.8 3.56 0.5" 
-					position="35.876 1.797 -21.821"
-					rotation="0 90 0">
+					position="35.97482 1.797 -21.86815" 
+					rotation="0 87.15 0">
 				</a-box>
 				
 				<!-- Link to BHall 2F
@@ -203,9 +205,9 @@
 				<!-- Facing BHall Glass Door -->
 				<a-box 
 					src="#GlassDoor" 
-					scale="2.8 3.56 0.5" 
-					position="72.040 -2.544 -1.863"
-					rotation="0 87.820 0">
+					scale="2.72 2.95 0.5" 
+					position="-28.05327 -2.544 -1.74519" 
+					rotation="0 87.82 0">
 				</a-box>
 				<!-- Facing W St. James, Left Glass Door -->
 				<a-box 
@@ -234,7 +236,7 @@
 					src="#GlassDoor" 
 					repeat="2 1"
 					scale="5.220 2.480 0.5" 
-					position="-18.579 2.480 29.571"
+					position="-18.579 -2.173 29.571"
 					rotation="0 90 0">
 				</a-box>
 				<!-- MSC, Facing Street, Left Glass Door -->
@@ -251,26 +253,33 @@
 					position="11.275 -2.276 11.645"
 					rotation="0 90 0">
 				</a-box>
-				<!-- Sission/Burgess, Facing On-Campus Street, Glass Door -->
+				<!-- MSC, Facing Sisson/Burgess, Glass Door -->
 				<a-box 
 					src="#GlassDoor" 
-					scale="2.8 2.480 0.5" 
-					position=""
-					rotation="0 90 0">
+					scale="2.19 2.4 0.5" 
+					position="-0.04932 -2.31966 10.41635"
+					rotation="">
+				</a-box>
+				<!-- Sission/Burgess, Facing MSC, Glass Door -->
+				<a-box 
+					src="#GlassDoor" 
+					scale="2.18 2.04 0.5" 
+					position="0.10882 -2.48452 -43.35837" 
+					rotation="0 -3.52 0">
 				</a-box>
 				<!-- Sission/Burgess, Facing BEC, Glass Door -->
 				<a-box 
 					src="#GlassDoor" 
-					scale="2.8 2.480 0.5" 
-					position=""
-					rotation="0 90 0">
+					scale="2.32 2.15 0.5" 
+					position="-4.98039 -2.50565 -48.77827" 
+					rotation="0 87.43 0">
 				</a-box>
-				<!-- Sission/Burgess, Facing MSC from BEC side, Glass Door -->
+				<!-- Sission/Burgess, Facing On-Campus Street, Glass Door -->
 				<a-box 
 					src="#GlassDoor" 
-					scale="2.8 2.480 0.5" 
-					position=""
-					rotation="0 90 0">
+					scale="2.19 2.4 0.5" 
+					position="16.75667 -2.39818 -44.97674" 
+					rotation="0 87.41 0">
 				</a-box>
 			</a-entity>
 
@@ -288,8 +297,24 @@
 				position="2.339 -1.144 -140.686"
 				rotation="0 90.110 0"
 				scale="1.070 1 1"
-				shadow
-			></a-entity>
+				shadow>
+				<!-- Facing Campus, Glass Doors -->
+				<a-box 
+					src="#GlassDoor" 
+					scale="9.48 2.8 0.5" 
+					position="-13.41621 2.49845 12.78653" 
+					rotation="0 90.31 0" 
+					repeat="4 1">
+				</a-box>
+				<!-- Facing Road, Glass Doors -->
+				<a-box 
+					src="#GlassDoor" 
+					scale="8.14 2.5 0.5" 
+					position="28.58358 2.33318 10.01725" 
+					rotation="0 90 0" 
+					repeat="4 1">
+				</a-box>
+			</a-entity>
 			
 			<!-- Westlake Hall -->
 			<a-entity 
@@ -299,6 +324,27 @@
 				scale="" 
 				shadow="" 
 				visible="">
+				<!-- Front Left Wood Door -->
+				<a-entity 
+					gltf-model="#WoodDoor" 
+					scale="0.02 0.015 0.017" 
+					rotation="" 
+					position="16.96931 -3.55415 21.18627">
+				</a-entity>
+				<!-- Front Right Glass Door -->
+				<a-box 
+					src="#GlassDoor" 
+					scale="2.06 2.02 0.5" 
+					position="16.26138 -2.79651 -20.49406" 
+					rotation="0 90 0">
+				</a-box>
+				<!-- Back Glass Doors -->
+				<a-box 
+					src="#GlassDoor" 
+					scale="2.19 2.4 0.5" 
+					position="-17.83967 -2.61845 -5.64234" 
+					rotation="0 90 0">
+				</a-box>
 			</a-entity>
 			
 			<!-- Olin Hall -->
@@ -324,7 +370,7 @@
 			<!-- Campus Roads -->			
 			<a-entity 
 				gltf-model="#Roads" 
-				position="-2.68115 0.1 2.54" 
+				position="-2.68115 0.12 2.54" 
 				scale="1.07 1 0.97" 
 				rotation="0 90 0" 
 				shadow="cast: false">
@@ -333,7 +379,7 @@
 			<!-- Campus Sidewalks -->			
 			<a-entity 
 				gltf-model="#Sidewalks" 
-				position="-2.24118 0.05 1.43678" 
+				position="-2.24118 0.06 1.43678" 
 				shadow="cast: false" 
 				scale="1.07 100 0.96" 
 				rotation="0 90 0" 
@@ -344,7 +390,7 @@
 			<!-- Founder's Circle -->
 			<a-entity 
 				gltf-model="#FoundersCircle" 
-				position="-3.39 0.16962 0.131" 
+				position="-3.39 0.18 0.131" 
 				rotation="0 90 0" 
 				shadow="cast: false" 
 				scale="1 0.28 1">
